@@ -38,17 +38,6 @@ class Wordle():
             else:
                 out.append('W')
         return out
-    
-    def convert_to_readable(self, response):
-        human_readable_response = ""
-        for i in range(5):
-            if response[i] == 'G':
-                human_readable_response += f"Letter {i}: Correct Letter & Position, "
-            elif response[i] == 'Y':
-                human_readable_response += f"Letter {i}: Correct Letter & Wrong Position, "
-            if response[i] == 'W':
-                human_readable_response += f"Letter {i}: Wrong Letter, "
-        return human_readable_response
 
 if __name__ == "__main__":
     wordle = Wordle()
