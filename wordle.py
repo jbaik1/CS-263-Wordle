@@ -5,7 +5,9 @@ class Wordle():
     def __init__(self) -> None:
         word_list = open("words.txt", 'r')
         words = word_list.read().split()
-        self.answer = random.choice(words)
+        # we keep everything lowercase for now
+        # we can change it later by explicitly tell the model to predict captical letters
+        self.answer = random.choice(words).lower()
     
     def get_answer(self):
         return self.answer
@@ -17,14 +19,17 @@ class Wordle():
         # given guess, return an array of 'white', 'yellow', and 'green' colors
         # white is incorrect, replacing grey so that it doesn't overlap w green
         answer = self.answer
+        # we keep everything lowercase for now
+        # we can change it later by explicitly tell the model to predict captical letters
+        guess = guess.lower()
 
         if len(guess) != len(answer): # not 5 letters
             return 'length error'
         
+        # avoid counting the same letter more than once
         letter_count = Counter(answer)
         
         out = []
-        # todo: handle logic for multiple yellows
         for i in range(len(answer)):
             letter_guess = guess[i]
             letter_answer = answer[i]
@@ -32,7 +37,7 @@ class Wordle():
             if letter_guess == letter_answer:
                 letter_count[letter_answer] -= 1
                 out.append('G')
-            elif letter_guess == letter_answer and letter_guess[i] in answer: # letter in word but misplaced
+            elif (letter_guess in answer) and (letter_count[letter_guess] > 0): # letter in word but misplaced
                 letter_count[letter_answer] -= 1
                 out.append('Y')
             else:
