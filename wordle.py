@@ -6,25 +6,25 @@ class Wordle():
         word_list = open("words.txt", 'r')
         words = word_list.read().split()
         # we keep everything lowercase for now
-        # we can change it later by explicitly tell the model to predict captical letters
+        # we can change it later by explicitly telling the model to predict captical letters
         self.answer = random.choice(words).lower()
     
     def get_answer(self):
         return self.answer
 
     def set_answer(self, new_answer):
-        self.answer = new_answer
+        self.answer = new_answer.lower()
 
     def turn(self, guess):
         # given guess, return an array of 'white', 'yellow', and 'green' colors
         # white is incorrect, replacing grey so that it doesn't overlap w green
         answer = self.answer
         # we keep everything lowercase for now
-        # we can change it later by explicitly tell the model to predict captical letters
+        # we can change it later by explicitly telling the model to predict captical letters
         guess = guess.lower()
 
         if len(guess) != len(answer): # not 5 letters
-            return 'length error'
+            raise ValueError(f"Your guess '{guess}' has more than {len(answer)} letters.")
         
         # avoid counting the same letter more than once
         letter_count = Counter(answer)
@@ -42,7 +42,7 @@ class Wordle():
                 out.append('Y')
             else:
                 out.append('W')
-        return out
+        return ''.join(out)
 
 if __name__ == "__main__":
     wordle = Wordle()

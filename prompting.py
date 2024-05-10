@@ -2,7 +2,7 @@ from wordle import Wordle
 
 class Prompt_Helper():
     def __init__(self):
-        self.instructions = "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result",
+        self.instructions = "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result",
         self.examples = [
             {
                 "answer": 'THREE',
@@ -30,8 +30,10 @@ class Prompt_Helper():
                 human_readable_response += f"Letter {guess[i]} at Position {i} is in the word and at the correct position, "
             elif response[i] == 'Y':
                 human_readable_response += f"Letter {guess[i]} at Position {i} is in the wrong position but is in the word, "
-            if response[i] == 'W':
+            elif response[i] == 'W':
                 human_readable_response += f"Letter {guess[i]} is not anywhere present in the word, "
+            else:
+                raise ValueError(f"Invalid response format for {response}. Response only includes letters G, Y, or W.")
         return human_readable_response
 
 
@@ -56,7 +58,7 @@ class Prompt_Helper():
             for gnum in range(len(self.examples[s]['guesses'])):
                 guess = self.examples[s]['guesses'][gnum]
                 message.extend([
-                    {"role": "user", "content": f"Enter guess #{gnum}"},
+                    {"role": "user", "content": f"Enter guess #{gnum + 1}"},
                     {"role": "assistant", "content": guess},
                     {"role": "user", "content": self.explanatory_response(guess, w.turn(guess), gnum)},
                 ])
