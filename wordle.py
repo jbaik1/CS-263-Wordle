@@ -4,10 +4,10 @@ from collections import Counter
 class Wordle():
     def __init__(self) -> None:
         word_list = open("words.txt", 'r')
-        words = word_list.read().split()
+        self.words = word_list.read().split()
         # we keep everything lowercase for now
         # we can change it later by explicitly telling the model to predict captical letters
-        self.answer = random.choice(words).lower()
+        self.answer = random.choice(self.words).lower()
     
     def get_answer(self):
         return self.answer
@@ -43,6 +43,14 @@ class Wordle():
             else:
                 out.append('W')
         return ''.join(out)
+
+    def answer_series(self, num_random=3):
+        # for few shot learning. 
+        # not sure to do words that are close or randomly sampled
+        answers = random.choices(self.words, k=num_random)
+        answers = [w.lower() for w in answers]
+        return  answers
+        
 
 if __name__ == "__main__":
     wordle = Wordle()
