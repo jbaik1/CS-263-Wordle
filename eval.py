@@ -1,5 +1,6 @@
 from wordle import Wordle
 import re
+from collections import defaultdict, Counter
 
 # functions for evaluating performances
 #
@@ -17,7 +18,9 @@ def eval_num_guesses(guesses, answer):
     
     return float('inf') # some large number if it never guessed it correctly
 
+
 def eval_num_correct_letters(guesses, answer):
+    # how many letters in the final guess are correct
     final = guesses[-1]
     
     num_correct = 0
@@ -27,7 +30,6 @@ def eval_num_correct_letters(guesses, answer):
             
     return num_correct
     
-
 
 def eval_avg_acc(guesses, answer):
     # how many letters are correct in each guess
@@ -48,8 +50,6 @@ def eval_avg_acc(guesses, answer):
     return average_acc
         
 
-
-
 def eval_entropy(answer, guesses=[]):
     # quality of guess using entropy
     # https://www.youtube.com/watch?v=v68zYyaEmEA
@@ -57,6 +57,66 @@ def eval_entropy(answer, guesses=[]):
     # maybe not worth it, given that it's kinda hard to program this
     
     return
+
+
+def eval_wyg(guesses, answer):
+    count_g = 0
+    count_y = 0
+    count_w = 0
+    letter_count = Counter(answer)
+    N = len(guesses)
+
+    for guess in guesses:
+        for idx in range(len(answer)):
+            letter_guess = guess[idx]
+            letter_answer = answer[idx]
+            
+            if letter_guess == letter_answer:
+                letter_count[letter_answer] -= 1
+                count_g += 1
+            elif (letter_guess in answer) and (letter_count[letter_guess] > 0): # letter in word but misplaced
+                letter_count[letter_answer] -= 1
+                count_y += 1
+            else:
+                count_w += 1
+
+    return count_g/N, count_y/N, count_w/N
+
+
+def eval_info_gain(guesses, answer):
+    wrong_letter = []
+    wrong_pos = []
+    wrong_letter_counts = []
+    wrong_pos_counts = []
+    letter_to_wrong_pos = defaultdict(list)
+
+    for guess in guesses:
+        # Count the wrong letters in the current guess
+        # that have already been shown in previous guesses
+        wrong_letter_count = 0
+        wrong_pos_count = 0
+        
+        for letter_idx, letter in enumerate(guess):
+            if letter not in answer:
+                if letter in wrong_letter:
+                    wrong_letter_count += 1
+                else:
+                    wrong_letter.append(letter)
+            elif letter != answer[letter_idx]:
+                if letter in wrong_pos:
+                    if letter_idx in letter_to_wrong_pos[letter]:
+                        wrong_pos_count += 1
+                    else:
+                        letter_to_wrong_pos[letter].append(letter_idx)
+                else:
+                    wrong_pos.append(letter)
+                    letter_to_wrong_pos[letter].append(letter_idx)
+
+        # print(wrong_letter)
+        # print(wrong_pos)
+        wrong_letter_counts.append(wrong_letter_count)
+        wrong_pos_counts.append(wrong_pos_count)
+
 
 class Conversation():
     def __init__(self, conversation) -> None:
@@ -72,7 +132,7 @@ class Conversation():
     def extract_correct_answer(self):
         last = self.raw_convo[-1]['content'].split()
         if last[-3:-1] == ['answer', 'is']:
-            return last[-1]
+            return last[-1].lower()
         else:
             raise("what other edge cases exist ?")
 
@@ -86,14 +146,12 @@ class Conversation():
             if not still_in_prompt and self.raw_convo[i]['role'] == 'assistant':
                 pattern = r'[A-Z]{5}'
                 guess = re.findall(pattern, self.raw_convo[i]['content'])[-1]
-                guesses.append(guess)
+                guesses.append(guess.lower())
         
         if len(guesses) > 5:
             raise("too many guesses")
         return guesses
         
-    
-
 
 def main():
     example_convo = [
