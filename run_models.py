@@ -8,7 +8,7 @@ from prompting import Prompt_Helper
 
 def save_conversations(conversations, outfile):
     with open(outfile, "w") as f:
-        json.dump(conversations, f)
+        json.dump(conversations, f, indent=4)
 
 def extract_json_guess(json_string):
     # Example
@@ -39,6 +39,23 @@ def extract_guess(string):
         # Extracted Guess (Method 2)
         pattern = r'[A-Z]{5}'
         return re.findall(pattern, string)[-1]
+
+def merge_consecutive_roles(json_data):
+    merged_data = [json_data[0]]
+    
+    i = 1
+    while i < len(json_data):
+        current_dict = json_data[i]
+        current_role = current_dict['role']
+        current_content = current_dict['content']
+        
+        if current_role == merged_data[-1]['role']:
+            merged_data[-1]['content'] += '\ncurrent_content'
+        else:
+            merged_data.append(current_dict)
+        i += 1
+    
+    return merged_data
 
 def main(args):
     # Configure the model and quantization
@@ -74,6 +91,9 @@ def main(args):
 
         i = 0
         for t in range(args.max_turns):
+            if args.model == "meta-llama/Llama-2-13b-chat-hf":
+                ## Llama 2 throws an error if there are two consecutive contents from the same role
+                conversation = merge_consecutive_roles(conversation)
             input_ids = tokenizer.apply_chat_template(
                 conversation,
                 add_generation_prompt=True,
@@ -84,7 +104,7 @@ def main(args):
                 tokenizer.eos_token_id,
                 tokenizer.convert_tokens_to_ids("<|eot_id|>")
             ]
-
+                
             outputs = model.generate(
                 input_ids,
                 max_new_tokens=500,
@@ -99,11 +119,10 @@ def main(args):
             response = outputs[0][input_ids.shape[-1]:]
             response_str = tokenizer.decode(response, skip_special_tokens=True)
 
-            guess_str = extract_guess(response_str)
-
             # Evaluate model output and give feedback
             guess_eval = ""
             try:
+                guess_str = extract_guess(response_str)
                 guess_eval = game.turn(guess_str)
                 user_response = p.jb_feedback(guess_str, guess_eval, t)["feedback"]
                 conversation.extend([
@@ -113,10 +132,14 @@ def main(args):
             except ValueError as e:
                 print("VALUE ERROR GAME", n)
                 print(response_str)
-                conversation.extend([
-                    {'role': 'assistant', 'content': response_str},
-                    {'role': 'user', 'content': str(e)}
-                ])
+                # conversation.extend([
+                #     {'role': 'assistant', 'content': response_str},
+                #     {'role': 'user', 'content': str(e)}
+                # ])
+                break
+            except IndexError as i:
+                print("INDEX ERROR GAME", n)
+                print(response_str)
                 break
 
             if guess_eval == 'GGGGG':
@@ -132,17 +155,19 @@ def main(args):
     else:
         if args.model == "meta-llama/Meta-Llama-3-8B-Instruct":
             model_name = "llama_3"
+        elif args.model == "meta-llama/Llama-2-13b-chat-hf":
+            model_name = "llama_2"
         else:
             model_name = "notllama"
-        outfile = f"conversations_{model_name}_{args.shots}shot_{args.num_games}games.json"
-    save_conversations(conversations, args.outfile)  
+        outfile = f"outputs/conversations_{model_name}_{args.shots}shot_{args.num_games}games.json"
+    save_conversations(conversations, outfile)  
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run the Wordle game or tests based on the language model")
     parser.add_argument("--model", help="HF model to run", default="meta-llama/Meta-Llama-3-8B-Instruct")
-    parser.add_argument("--num_games", help="the number of games to run", default=50)
-    parser.add_argument("--shots", help="zero-shot, 1-shot, 2-shot, ... up to 4-shot", default=4)
-    parser.add_argument("--max_turns", help="if you don't limit the model to 5, the amount of turns you allow it to keep guessing for", default=5)
+    parser.add_argument("--num_games", help="the number of games to run", type=int, default=50)
+    parser.add_argument("--shots", help="zero-shot, 1-shot, 2-shot, ... up to 4-shot", type=int, default=4)
+    parser.add_argument("--max_turns", help="if you don't limit the model to 5, the amount of turns you allow it to keep guessing for", type=int, default=5)
     parser.add_argument("--outfile", help="The JSON file to which the results will be dumped")
     # parser.add_argument("--test_eval_utils", action="store_true", help="Run evaluation utils test")
     # parser.add_argument("--test_phi_dataset", action="store_true", help="Run Phi dataset test")
