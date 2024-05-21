@@ -1,5 +1,6 @@
 from wordle import Wordle
-import re
+import re, random
+import numpy as np
 from collections import defaultdict, Counter
 
 # functions for evaluating performances
@@ -16,7 +17,7 @@ def eval_num_guesses(guesses, answer):
         if guesses[i] == answer:
             return i+1
     
-    return float('inf') # some large number if it never guessed it correctly
+    return 0 # some large number if it never guessed it correctly
 
 
 def eval_num_correct_letters(guesses, answer):
@@ -55,7 +56,6 @@ def eval_entropy(answer, guesses=[]):
     # https://www.youtube.com/watch?v=v68zYyaEmEA
     # unlikely that the llm considers this 
     # maybe not worth it, given that it's kinda hard to program this
-    
     return
 
 
@@ -80,42 +80,75 @@ def eval_wyg(guesses, answer):
             else:
                 count_w += 1
 
-    return count_g/N, count_y/N, count_w/N
+    assert(N == count_g + count_y + count_w)
+    return count_g, count_y, count_w
 
 
-def eval_info_gain(guesses, answer):
-    wrong_letter = []
-    wrong_pos = []
-    wrong_letter_counts = []
-    wrong_pos_counts = []
+def eval_info_gain(guesses, answer, word_list):
+    ''' 
+    returns counts relating to prevalence of not leveraging feedback from previous guesses
+    
+    Counting 3 types of errors:
+    1. 'Wrong Letter': The model uses a letter in the guess that it should know is not in the word
+    2. 'Wrong Pos': The model puts a letter in a position that it should know is not right
+    3. 'Undo Correct': The model guessed something other than the correct letter in the position it already figured out the correct letter for.
+    '''
+    wrong_letter_count, wrong_pos_count, undo_correct_count = 0,0,0
+    wrong_letter_random, wrong_pos_random, undo_correct_random = 0,0,0
+    wrong_letter_denom, wrong_pos_denom, undo_correct_denom = 0,0,0
+
+    letters_known_not_in_word = []
+    pos_to_right_letter = defaultdict(list)
     letter_to_wrong_pos = defaultdict(list)
 
     for guess in guesses:
         # Count the wrong letters in the current guess
         # that have already been shown in previous guesses
-        wrong_letter_count = 0
-        wrong_pos_count = 0
+
+        # for each guess, this is the information they have
+        wrong_letter_denom += len(letters_known_not_in_word) # number of letters it shouldnt guess
+        wrong_pos_denom += sum(len(lst) for lst in letter_to_wrong_pos.values()) # numbers of (letter, position) pairs it shouldn't guess
+        undo_correct_denom += len(pos_to_right_letter.keys()) # number of correct (letter, position) pairs it should guess
         
+        wrong_pos_count = 0
+        random_guess = random.sample(word_list)
         for letter_idx, letter in enumerate(guess):
+            random_letter = random_guess[letter_idx]
+            if letter_idx in pos_to_right_letter.keys():
+                if letter != pos_to_right_letter[letter_idx]:
+                    # implies model should already know letter in this spot
+                    undo_correct_count += 1
+                if random_letter != pos_to_right_letter[letter_idx]:
+                    undo_correct_random += 1
+
             if letter not in answer:
-                if letter in wrong_letter:
+                if letter in letters_known_not_in_word:
                     wrong_letter_count += 1
                 else:
-                    wrong_letter.append(letter)
+                    letters_known_not_in_word.append(letter)
             elif letter != answer[letter_idx]:
-                if letter in wrong_pos:
+                if letter in letter_to_wrong_pos.keys():
                     if letter_idx in letter_to_wrong_pos[letter]:
                         wrong_pos_count += 1
                     else:
                         letter_to_wrong_pos[letter].append(letter_idx)
                 else:
-                    wrong_pos.append(letter)
                     letter_to_wrong_pos[letter].append(letter_idx)
+            elif letter == answer[letter_idx]:
+                pos_to_right_letter[letter_idx] = letter
+            
+            if random_letter not in answer:
+                if random_letter in letters_known_not_in_word:
+                    wrong_letter_random += 1
+            elif random_letter != answer[letter_idx]:
+                if random_letter in letter_to_wrong_pos.keys():
+                    if letter_idx in letter_to_wrong_pos[random_letter]:
+                        wrong_pos_random += 1
 
-        # print(wrong_letter)
-        # print(wrong_pos)
-        wrong_letter_counts.append(wrong_letter_count)
-        wrong_pos_counts.append(wrong_pos_count)
+
+    return [[wrong_letter_count, wrong_letter_denom, wrong_letter_random], 
+            [wrong_pos_count, wrong_pos_denom, wrong_pos_random], 
+            [undo_correct_count, undo_correct_denom, undo_correct_random]]  
 
 
 class Conversation():
@@ -152,6 +185,39 @@ class Conversation():
             raise("too many guesses")
         return guesses
         
+def get_aggregate_scores(conversation_list):
+    GYW = np.zeros(3)
+    info_gain_stats = np.zeros((3, 3))
+    num_guesses = []
+    with open("words.txt", 'r') as f:
+        word_list = f.read().split()
+    
+    for i, c in enumerate(conversation_list):
+        # don't need to have accuracy cause this essentially replaces it ?
+        guessnum = eval_num_guesses(c.guesses, c.answer)
+        if guessnum > 0:
+            num_guesses.append(guessnum)
+        GYW = GYW + np.array(eval_wyg(c.guesses, c.answer)) #element-wise addition
+        info_gain_stats = info_gain_stats + np.array(eval_info_gain(c.guesses, c.answer, word_list)) #element-wise addition
+
+    G, Y, W = GYW[0], GYW[1], GYW[2]
+    correct_pct = (G) / (G + Y + W)
+    correct_letter_pct = (G + Y) / (G + Y + W)
+
+    wrong_letter_prevalence = info_gain_stats[0][0] / info_gain_stats[0][1]
+    wrong_pos_prevalence = info_gain_stats[1][0] / info_gain_stats[1][1]
+    undo_correct_prevalence = info_gain_stats[2][0] / info_gain_stats[2][1]
+    wrong_letter_random = info_gain_stats[0][2] / info_gain_stats[0][1]
+    wrong_pos_random = info_gain_stats[1][2] / info_gain_stats[1][1]
+    undo_correct_random = info_gain_stats[2][2] / info_gain_stats[2][1]
+
+    end_letter_level_acc = sum([eval_num_correct_letters(c.guesses, c.answer) for c in conversation_list]) / len(conversation_list)
+    avg_number_of_guesses = sum(num_guesses) / len(num_guesses)
+
+
+
+    
+
 
 def main():
     example_convo = [
