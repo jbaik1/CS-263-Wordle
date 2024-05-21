@@ -24,7 +24,7 @@ class Wordle():
         guess = guess.lower()
 
         if len(guess) != len(answer): # not 5 letters
-            raise ValueError(f"Your guess '{guess}' has more than {len(answer)} letters.")
+            raise ValueError(f"Your guess '{guess}' does not have {len(answer)} letters.")
         
         # avoid counting the same letter more than once
         letter_count = Counter(answer)
