@@ -16,3 +16,4 @@ huggingface-cli login
 ```
 
 ### Code Executions:
+python3 run_prompt.py --model_id_or_path "model_identifier" --single_prompt "Enter your guess"
