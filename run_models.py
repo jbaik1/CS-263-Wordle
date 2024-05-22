@@ -85,13 +85,14 @@ def main(args):
     
     #print(starting_conversation)
 
-    victory = False
+    
     conversations = {}
     for n in tqdm(range(args.num_games)):
         game = Wordle()
         conversation = starting_conversation.copy()
 
         i = 0
+        victory = False
         for t in range(args.max_turns):
             if args.model == "meta-llama/Llama-2-13b-chat-hf":
                 ## Llama 2 throws an error if there are two consecutive contents from the same role
@@ -167,7 +168,7 @@ def main(args):
             model_name = "llama_2"
         else:
             model_name = "notllama"
-        outfile = f"outputs/conversations_{model_name}_{args.shots}shot_{args.num_games}games.json"
+        outfile = f"outputs_jb/conversations_{model_name}_{args.shots}shot_{args.num_games}games.json"
     save_conversations(conversations, outfile)  
 
 if __name__ == "__main__":

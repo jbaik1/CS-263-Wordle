@@ -17,11 +17,15 @@ def eval_num_guesses(guesses, answer):
         if guesses[i] == answer:
             return i+1
     
-    return 0 # some large number if it never guessed it correctly
+
+    return -1 # never guessed it correctly
 
 
 def eval_num_correct_letters(guesses, answer):
     # how many letters in the final guess are correct
+    if len(guesses) == 0:
+        print("In eval_num_correct_letters: list of guesses is empty")
+        return 0
     final = guesses[-1]
     
     num_correct = 0
@@ -163,10 +167,16 @@ class Conversation():
         
 
     def extract_correct_answer(self):
+        print(self.raw_convo)
         last = self.raw_convo[-1]['content'].split()
+        #print(last)
+
         if last[-3:-1] == ['answer', 'is']:
             return last[-1].lower()
+        elif last[-3:-1] == ['correct', 'word']:
+            return last[-1].lower()
         else:
+            print(last)
             raise("what other edge cases exist ?")
 
     def extract_guesses(self):
