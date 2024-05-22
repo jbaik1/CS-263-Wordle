@@ -16,4 +16,18 @@ huggingface-cli login
 ```
 
 ### Code Executions:
-```python3 run_prompt.py --model_id_or_path "model_identifier" --single_prompt "Enter your prompt"```
+Run the simulator specifying a custom model and output file:
+```
+python3 run_prompts.py --model "your-model-path" --num_games 100 --outfile "results.json"
+```
+
+Limit the number of turns per game to 5, using a zero-shot strategy:
+```
+python3 run_prompts.py --shots 0 --max_turns 5
+```
+
+Run the simulator specifying a custom model and output file:
+```python3 run_prompts.py --model "your-model-path" --num_games 100 --output_path "results.json"```
+
+
+
