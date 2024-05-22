@@ -83,6 +83,8 @@ def main(args):
     else:
         starting_conversation = p.load_few_shot_examples(shots=args.shots)
     
+    #print(starting_conversation)
+
     victory = False
     conversations = {}
     for n in tqdm(range(args.num_games)):
@@ -119,6 +121,8 @@ def main(args):
             response = outputs[0][input_ids.shape[-1]:]
             response_str = tokenizer.decode(response, skip_special_tokens=True)
 
+            #print("raw output:", response_str)
+
             # Evaluate model output and give feedback
             guess_eval = ""
             try:
@@ -142,9 +146,13 @@ def main(args):
                 print(response_str)
                 break
 
+
             if guess_eval == 'GGGGG':
                 conversation.append({'role': 'system', 'content': f"Correct! The answer is {game.get_answer()}"})
                 victory = True
+                break
+
+            #print(conversation[-1])
 
         if not victory:
             conversation.append({'role': 'system', 'content': f"{args.max_turns} guesses exhausted! The correct answer is {game.get_answer()}"})
