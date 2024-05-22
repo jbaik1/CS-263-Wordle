@@ -80,7 +80,7 @@ def eval_wyg(guesses, answer):
             else:
                 count_w += 1
 
-    assert(N == count_g + count_y + count_w)
+    assert(N * 5 == count_g + count_y + count_w)
     return count_g, count_y, count_w
 
 
@@ -111,7 +111,7 @@ def eval_info_gain(guesses, answer, word_list):
         undo_correct_denom += len(pos_to_right_letter.keys()) # number of correct (letter, position) pairs it should guess
         
         wrong_pos_count = 0
-        random_guess = random.sample(word_list)
+        random_guess = random.sample(word_list, 1)[0].lower()
         for letter_idx, letter in enumerate(guess):
             random_letter = random_guess[letter_idx]
             if letter_idx in pos_to_right_letter.keys():
@@ -173,7 +173,7 @@ class Conversation():
         guesses = []
         still_in_prompt = True
         for i in range(len(self.raw_convo)):
-            if still_in_prompt and (self.raw_convo[i]['role'] == 'system') and (self.raw_convo[i]['content'] == 'Now it is your turn'):
+            if still_in_prompt and (self.raw_convo[i]['role'] == 'user') and ("let's play another game." in self.raw_convo[i]['content']):
                 still_in_prompt = False
                 self.end_of_prompt = i
             if not still_in_prompt and self.raw_convo[i]['role'] == 'assistant':
@@ -181,24 +181,27 @@ class Conversation():
                 guess = re.findall(pattern, self.raw_convo[i]['content'])[-1]
                 guesses.append(guess.lower())
         
-        if len(guesses) > 5:
-            raise("too many guesses")
+        # if len(guesses) > 5:
+        #     raise("too many guesses")
         return guesses
         
 def get_aggregate_scores(conversation_list):
     GYW = np.zeros(3)
     info_gain_stats = np.zeros((3, 3))
     num_guesses = []
+    end_letter_level_acc = []
     with open("words.txt", 'r') as f:
         word_list = f.read().split()
     
-    for i, c in enumerate(conversation_list):
+    for key, convo in conversation_list.items():
+        c = Conversation(convo)
         # don't need to have accuracy cause this essentially replaces it ?
-        guessnum = eval_num_guesses(c.guesses, c.answer)
+        guessnum = eval_num_guesses(c.guesses, c.correct_answer)
         if guessnum > 0:
             num_guesses.append(guessnum)
-        GYW = GYW + np.array(eval_wyg(c.guesses, c.answer)) #element-wise addition
-        info_gain_stats = info_gain_stats + np.array(eval_info_gain(c.guesses, c.answer, word_list)) #element-wise addition
+        GYW = GYW + np.array(eval_wyg(c.guesses, c.correct_answer)) #element-wise addition
+        info_gain_stats = info_gain_stats + np.array(eval_info_gain(c.guesses, c.correct_answer, word_list)) #element-wise addition
+        end_letter_level_acc.append(eval_num_correct_letters(c.guesses, c.correct_answer))
 
     G, Y, W = GYW[0], GYW[1], GYW[2]
     correct_pct = (G) / (G + Y + W)
@@ -211,12 +214,19 @@ def get_aggregate_scores(conversation_list):
     wrong_pos_random = info_gain_stats[1][2] / info_gain_stats[1][1]
     undo_correct_random = info_gain_stats[2][2] / info_gain_stats[2][1]
 
-    end_letter_level_acc = sum([eval_num_correct_letters(c.guesses, c.answer) for c in conversation_list]) / len(conversation_list)
-    avg_number_of_guesses = sum(num_guesses) / len(num_guesses)
+    end_letter_level_acc = sum(end_letter_level_acc) / len(conversation_list)
+    avg_number_of_guesses = sum(num_guesses) / len(conversation_list)
 
-
-
-    
+    print(f"Correct percentage: {correct_pct}")
+    print(f"Correct letter percentage: {correct_letter_pct}")
+    print(f"Wrong letter prevalence: {wrong_letter_prevalence}")
+    print(f"Wrong pos prevalence: {wrong_pos_prevalence}")
+    print(f"Undo correct prevalence: {undo_correct_prevalence}")
+    print(f"Wrong letter random: {wrong_letter_random}")
+    print(f"Wrong pos random: {wrong_pos_random}")
+    print(f"Undo correct random: {undo_correct_random}")
+    print(f"End letter level acc: {end_letter_level_acc}")
+    print(f"Average number of guesses: {avg_number_of_guesses}")
 
 
 def main():
