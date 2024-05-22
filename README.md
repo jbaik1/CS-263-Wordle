@@ -27,6 +27,7 @@ python3 run_prompts.py --shots 0 --max_turns 5
 ```
 
 Run the simulator specifying a custom model and output file:
+
 ```python3 run_prompts.py --model "your-model-path" --num_games 100 --output_path "results.json"```
 
 
