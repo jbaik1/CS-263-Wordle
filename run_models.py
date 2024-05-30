@@ -1,5 +1,5 @@
 import argparse
-import os, re, json
+import os, re, json, pathlib
 import torch
 from tqdm import tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
@@ -7,6 +7,7 @@ from wordle import Wordle
 from prompting import Prompt_Helper
 
 def save_conversations(conversations, outfile):
+    print("outfile:", outfile)
     with open(outfile, "w") as f:
         json.dump(conversations, f, indent=4)
 
@@ -160,7 +161,7 @@ def main(args):
         conversations[n] = conversation
 
     if args.outfile:
-        outfile = args.outfile
+        model_name = args.model
     else:
         if args.model == "meta-llama/Meta-Llama-3-8B-Instruct":
             model_name = "llama_3"
@@ -168,7 +169,7 @@ def main(args):
             model_name = "llama_2"
         else:
             model_name = "notllama"
-        outfile = f"outputs_jb/conversations_{model_name}_{args.shots}shot_{args.num_games}games.json"
+    outfile = f"outputs/conversations_{model_name}_{args.shots}shot_{args.max_turns}_turns_{args.num_games}games.json"
     save_conversations(conversations, outfile)  
 
 if __name__ == "__main__":
