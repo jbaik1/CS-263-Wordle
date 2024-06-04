@@ -11,7 +11,7 @@ class Prompt_Helper():
             },
             {
                 "answer": 'STAFF',
-                "guesses": ['WHILE', 'RADIO', 'START', 'STAGE', 'STAFF']
+                "guesses": ['WHILE', 'RADIO', 'START', 'STAFF']
             },
             {
                 "answer": 'PROWL',
@@ -20,6 +20,10 @@ class Prompt_Helper():
             {
                 "answer": 'NICER',
                 "guesses": ['RAISE', 'THEIR', 'LIVER', 'NICER']
+            },
+            {
+                "answer": 'HOTEL',
+                "guesses": ['LARES', 'OILED', 'HOTEL'] 
             }
         ]
     
@@ -111,7 +115,7 @@ Please enter your next guess:
 
         for s in range(shots):
             example = self.examples[s]
-            message.append({"role": "system", "content": "Example #1:"})
+            message.append({"role": "system", "content": f"Example #{s}:"})
             w = Wordle()
             w.set_answer(example["answer"])
             target = example["answer"]
