@@ -1,0 +1,2702 @@
+{
+    "0": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: START"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'START'. The feedback for each letter is:\n{ \n1: Letter S is not anywhere present in the word.\n2: Letter T is not anywhere present in the word.\n3: Letter A at Position 3 is in the wrong position but is in the word.\n4: Letter R is not anywhere present in the word.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: TABLE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TABLE'. The feedback for each letter is:\n{ \n1: Letter T is not anywhere present in the word.\n2: Letter A at Position 2 is in the word and at the correct position.\n3: Letter B is not anywhere present in the word.\n4: Letter L at Position 4 is in the wrong position but is in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: TALES"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TALES'. The feedback for each letter is:\n{ \n1: Letter T is not anywhere present in the word.\n2: Letter A at Position 2 is in the word and at the correct position.\n3: Letter L at Position 3 is in the word and at the correct position.\n4: Letter E is not anywhere present in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: ALLEY"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'ALLEY'. The feedback for each letter is:\n{ \n1: Letter A at Position 1 is in the wrong position but is in the word.\n2: Letter L at Position 2 is in the wrong position but is in the word.\n3: Letter L at Position 3 is in the word and at the correct position.\n4: Letter E is not anywhere present in the word.\n5: Letter Y is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is calif"
+        }
+    ],
+    "1": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U at Position 3 is in the wrong position but is in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: TRUST\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TRUST'. The feedback for each letter is:\n{ \n1: Letter T is not anywhere present in the word.\n2: Letter R is not anywhere present in the word.\n3: Letter U at Position 3 is in the wrong position but is in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: BUNCH\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'BUNCH'. The feedback for each letter is:\n{ \n1: Letter B is not anywhere present in the word.\n2: Letter U at Position 2 is in the word and at the correct position.\n3: Letter N is not anywhere present in the word.\n4: Letter C is not anywhere present in the word.\n5: Letter H is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: UNITE\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'UNITE'. The feedback for each letter is:\n{ \n1: Letter U at Position 1 is in the wrong position but is in the word.\n2: Letter N is not anywhere present in the word.\n3: Letter I is not anywhere present in the word.\n4: Letter T is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: UNITA\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'UNITA'. The feedback for each letter is:\n{ \n1: Letter U at Position 1 is in the wrong position but is in the word.\n2: Letter N is not anywhere present in the word.\n3: Letter I is not anywhere present in the word.\n4: Letter T is not anywhere present in the word.\n5: Letter A is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is fully"
+        }
+    ],
+    "2": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O at Position 2 is in the wrong position but is in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: TABLE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TABLE'. The feedback for each letter is:\n{ \n1: Letter T is not anywhere present in the word.\n2: Letter A at Position 2 is in the wrong position but is in the word.\n3: Letter B is not anywhere present in the word.\n4: Letter L is not anywhere present in the word.\n5: Letter E at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: GRAPE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'GRAPE'. The feedback for each letter is:\n{ \n1: Letter G is not anywhere present in the word.\n2: Letter R is not anywhere present in the word.\n3: Letter A at Position 3 is in the wrong position but is in the word.\n4: Letter P is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: BARGE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'BARGE'. The feedback for each letter is:\n{ \n1: Letter B is not anywhere present in the word.\n2: Letter A at Position 2 is in the wrong position but is in the word.\n3: Letter R is not anywhere present in the word.\n4: Letter G is not anywhere present in the word.\n5: Letter E at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: CARET"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'CARET'. The feedback for each letter is:\n{ \n1: Letter C at Position 1 is in the wrong position but is in the word.\n2: Letter A at Position 2 is in the wrong position but is in the word.\n3: Letter R is not anywhere present in the word.\n4: Letter E at Position 4 is in the wrong position but is in the word.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is ocean"
+        }
+    ],
+    "3": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: HUNCH"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HUNCH'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter U is not anywhere present in the word.\n3: Letter N is not anywhere present in the word.\n4: Letter C is not anywhere present in the word.\n5: Letter H at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: HALES"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HALES'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter A is not anywhere present in the word.\n3: Letter L is not anywhere present in the word.\n4: Letter E is not anywhere present in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: HARDY"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HARDY'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter A is not anywhere present in the word.\n3: Letter R is not anywhere present in the word.\n4: Letter D is not anywhere present in the word.\n5: Letter Y is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: HINTS"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HINTS'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter I at Position 2 is in the word and at the correct position.\n3: Letter N is not anywhere present in the word.\n4: Letter T at Position 4 is in the wrong position but is in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is tight"
+        }
+    ],
+    "4": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter U is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: HORSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HORSE'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter R at Position 3 is in the word and at the correct position.\n4: Letter S is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "With this new feedback, my next guess is: HOVER"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOVER'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter V is not anywhere present in the word.\n4: Letter E is not anywhere present in the word.\n5: Letter R at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "With this new feedback, my next guess is: HOLDS"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOLDS'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter L is not anywhere present in the word.\n4: Letter D is not anywhere present in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "With this new feedback, my next guess is: HOMEY"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOMEY'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter M is not anywhere present in the word.\n4: Letter E is not anywhere present in the word.\n5: Letter Y is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is forth"
+        }
+    ],
+    "5": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U at Position 3 is in the wrong position but is in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: TRUST\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TRUST'. The feedback for each letter is:\n{ \n1: Letter T at Position 1 is in the wrong position but is in the word.\n2: Letter R is not anywhere present in the word.\n3: Letter U at Position 3 is in the wrong position but is in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter T at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: TUNES\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TUNES'. The feedback for each letter is:\n{ \n1: Letter T at Position 1 is in the wrong position but is in the word.\n2: Letter U at Position 2 is in the wrong position but is in the word.\n3: Letter N is not anywhere present in the word.\n4: Letter E is not anywhere present in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: TUNTS\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TUNTS'. The feedback for each letter is:\n{ \n1: Letter T at Position 1 is in the wrong position but is in the word.\n2: Letter U at Position 2 is in the wrong position but is in the word.\n3: Letter N is not anywhere present in the word.\n4: Letter T at Position 4 is in the wrong position but is in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: TUNIT\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TUNIT'. The feedback for each letter is:\n{ \n1: Letter T at Position 1 is in the wrong position but is in the word.\n2: Letter U at Position 2 is in the wrong position but is in the word.\n3: Letter N is not anywhere present in the word.\n4: Letter I is not anywhere present in the word.\n5: Letter T at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is input"
+        }
+    ],
+    "6": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O at Position 2 is in the wrong position but is in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter S at Position 4 is in the wrong position but is in the word.\n5: Letter E at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: MOLES\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'MOLES'. The feedback for each letter is:\n{ \n1: Letter M is not anywhere present in the word.\n2: Letter O at Position 2 is in the wrong position but is in the word.\n3: Letter L is not anywhere present in the word.\n4: Letter E at Position 4 is in the wrong position but is in the word.\n5: Letter S at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: BOATE\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'BOATE'. The feedback for each letter is:\n{ \n1: Letter B is not anywhere present in the word.\n2: Letter O at Position 2 is in the wrong position but is in the word.\n3: Letter A is not anywhere present in the word.\n4: Letter T is not anywhere present in the word.\n5: Letter E at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: ROATE\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'ROATE'. The feedback for each letter is:\n{ \n1: Letter R at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the wrong position but is in the word.\n3: Letter A is not anywhere present in the word.\n4: Letter T is not anywhere present in the word.\n5: Letter E at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: ROEVE\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'ROEVE'. The feedback for each letter is:\n{ \n1: Letter R at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the wrong position but is in the word.\n3: Letter E at Position 3 is in the wrong position but is in the word.\n4: Letter V is not anywhere present in the word.\n5: Letter E at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is score"
+        }
+    ],
+    "7": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: BREAD"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'BREAD'. The feedback for each letter is:\n{ \n1: Letter B is not anywhere present in the word.\n2: Letter R at Position 2 is in the wrong position but is in the word.\n3: Letter E is not anywhere present in the word.\n4: Letter A at Position 4 is in the wrong position but is in the word.\n5: Letter D is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: TRAIN"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TRAIN'. The feedback for each letter is:\n{ \n1: Letter T at Position 1 is in the wrong position but is in the word.\n2: Letter R at Position 2 is in the wrong position but is in the word.\n3: Letter A at Position 3 is in the word and at the correct position.\n4: Letter I is not anywhere present in the word.\n5: Letter N is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: TRAPS"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TRAPS'. The feedback for each letter is:\n{ \n1: Letter T at Position 1 is in the wrong position but is in the word.\n2: Letter R at Position 2 is in the wrong position but is in the word.\n3: Letter A at Position 3 is in the word and at the correct position.\n4: Letter P is not anywhere present in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: TARCH"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TARCH'. The feedback for each letter is:\n{ \n1: Letter T at Position 1 is in the wrong position but is in the word.\n2: Letter A at Position 2 is in the wrong position but is in the word.\n3: Letter R at Position 3 is in the wrong position but is in the word.\n4: Letter C is not anywhere present in the word.\n5: Letter H is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is apart"
+        }
+    ],
+    "8": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U at Position 3 is in the wrong position but is in the word.\n4: Letter S at Position 4 is in the wrong position but is in the word.\n5: Letter E at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: TRITE\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TRITE'. The feedback for each letter is:\n{ \n1: Letter T is not anywhere present in the word.\n2: Letter R is not anywhere present in the word.\n3: Letter I at Position 3 is in the wrong position but is in the word.\n4: Letter T is not anywhere present in the word.\n5: Letter E at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: BRISE\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'BRISE'. The feedback for each letter is:\n{ \n1: Letter B is not anywhere present in the word.\n2: Letter R is not anywhere present in the word.\n3: Letter I at Position 3 is in the wrong position but is in the word.\n4: Letter S at Position 4 is in the wrong position but is in the word.\n5: Letter E at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: GRIDE\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'GRIDE'. The feedback for each letter is:\n{ \n1: Letter G is not anywhere present in the word.\n2: Letter R is not anywhere present in the word.\n3: Letter I at Position 3 is in the wrong position but is in the word.\n4: Letter D is not anywhere present in the word.\n5: Letter E at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: FRISE\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'FRISE'. The feedback for each letter is:\n{ \n1: Letter F is not anywhere present in the word.\n2: Letter R is not anywhere present in the word.\n3: Letter I at Position 3 is in the wrong position but is in the word.\n4: Letter S at Position 4 is in the wrong position but is in the word.\n5: Letter E at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is issue"
+        }
+    ],
+    "9": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O at Position 2 is in the wrong position but is in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: MOLES"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'MOLES'. The feedback for each letter is:\n{ \n1: Letter M is not anywhere present in the word.\n2: Letter O at Position 2 is in the wrong position but is in the word.\n3: Letter L is not anywhere present in the word.\n4: Letter E at Position 4 is in the wrong position but is in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: TOLES"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TOLES'. The feedback for each letter is:\n{ \n1: Letter T is not anywhere present in the word.\n2: Letter O at Position 2 is in the wrong position but is in the word.\n3: Letter L is not anywhere present in the word.\n4: Letter E at Position 4 is in the wrong position but is in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: BOATE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'BOATE'. The feedback for each letter is:\n{ \n1: Letter B is not anywhere present in the word.\n2: Letter O at Position 2 is in the wrong position but is in the word.\n3: Letter A is not anywhere present in the word.\n4: Letter T is not anywhere present in the word.\n5: Letter E at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: ROATE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'ROATE'. The feedback for each letter is:\n{ \n1: Letter R at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the wrong position but is in the word.\n3: Letter A is not anywhere present in the word.\n4: Letter T is not anywhere present in the word.\n5: Letter E at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is drove"
+        }
+    ],
+    "10": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter U is not anywhere present in the word.\n4: Letter S at Position 4 is in the word and at the correct position.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: MOIST"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'MOIST'. The feedback for each letter is:\n{ \n1: Letter M is not anywhere present in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter I is not anywhere present in the word.\n4: Letter S at Position 4 is in the word and at the correct position.\n5: Letter T at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: MOATS"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'MOATS'. The feedback for each letter is:\n{ \n1: Letter M is not anywhere present in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter A is not anywhere present in the word.\n4: Letter T at Position 4 is in the wrong position but is in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: MOBIT\n\n(Note: I'm trying to keep the correct letters and positions, and adjust the incorrect ones)"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'MOBIT'. The feedback for each letter is:\n{ \n1: Letter M is not anywhere present in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter B is not anywhere present in the word.\n4: Letter I is not anywhere present in the word.\n5: Letter T at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: MOLOT\n\n(Note: I'm trying to keep the correct letters and positions, and adjust the incorrect ones)"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'MOLOT'. The feedback for each letter is:\n{ \n1: Letter M is not anywhere present in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter L is not anywhere present in the word.\n4: Letter O is not anywhere present in the word.\n5: Letter T at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is worst"
+        }
+    ],
+    "11": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O at Position 2 is in the wrong position but is in the word.\n3: Letter U at Position 3 is in the wrong position but is in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: MOIST\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'MOIST'. The feedback for each letter is:\n{ \n1: Letter M is not anywhere present in the word.\n2: Letter O at Position 2 is in the wrong position but is in the word.\n3: Letter I is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: BOATS\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'BOATS'. The feedback for each letter is:\n{ \n1: Letter B is not anywhere present in the word.\n2: Letter O at Position 2 is in the wrong position but is in the word.\n3: Letter A is not anywhere present in the word.\n4: Letter T is not anywhere present in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: COAST\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'COAST'. The feedback for each letter is:\n{ \n1: Letter C is not anywhere present in the word.\n2: Letter O at Position 2 is in the wrong position but is in the word.\n3: Letter A is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: LOOPS\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'LOOPS'. The feedback for each letter is:\n{ \n1: Letter L is not anywhere present in the word.\n2: Letter O at Position 2 is in the wrong position but is in the word.\n3: Letter O at Position 3 is in the word and at the correct position.\n4: Letter P at Position 4 is in the wrong position but is in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is proud"
+        }
+    ],
+    "12": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: HEART"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HEART'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter E at Position 2 is in the wrong position but is in the word.\n3: Letter A is not anywhere present in the word.\n4: Letter R is not anywhere present in the word.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: HERES"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HERES'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter E at Position 2 is in the wrong position but is in the word.\n3: Letter R is not anywhere present in the word.\n4: Letter E at Position 4 is in the wrong position but is in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: HEAVE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HEAVE'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter E at Position 2 is in the wrong position but is in the word.\n3: Letter A is not anywhere present in the word.\n4: Letter V is not anywhere present in the word.\n5: Letter E at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: HEART (again, trying to get the correct position of the letters)"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HEART'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter E at Position 2 is in the wrong position but is in the word.\n3: Letter A is not anywhere present in the word.\n4: Letter R is not anywhere present in the word.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is shelf"
+        }
+    ],
+    "13": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter S at Position 4 is in the word and at the correct position.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: STAMP"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'STAMP'. The feedback for each letter is:\n{ \n1: Letter S at Position 1 is in the wrong position but is in the word.\n2: Letter T is not anywhere present in the word.\n3: Letter A at Position 3 is in the word and at the correct position.\n4: Letter M is not anywhere present in the word.\n5: Letter P is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: START"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'START'. The feedback for each letter is:\n{ \n1: Letter S at Position 1 is in the wrong position but is in the word.\n2: Letter T is not anywhere present in the word.\n3: Letter A at Position 3 is in the word and at the correct position.\n4: Letter R is not anywhere present in the word.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: SANDS"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'SANDS'. The feedback for each letter is:\n{ \n1: Letter S at Position 1 is in the wrong position but is in the word.\n2: Letter A at Position 2 is in the wrong position but is in the word.\n3: Letter N is not anywhere present in the word.\n4: Letter D is not anywhere present in the word.\n5: Letter S at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: SALES"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'SALES'. The feedback for each letter is:\n{ \n1: Letter S at Position 1 is in the wrong position but is in the word.\n2: Letter A at Position 2 is in the wrong position but is in the word.\n3: Letter L is not anywhere present in the word.\n4: Letter E is not anywhere present in the word.\n5: Letter S at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is class"
+        }
+    ],
+    "14": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U at Position 3 is in the wrong position but is in the word.\n4: Letter S at Position 4 is in the wrong position but is in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: TRUST"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TRUST'. The feedback for each letter is:\n{ \n1: Letter T is not anywhere present in the word.\n2: Letter R is not anywhere present in the word.\n3: Letter U at Position 3 is in the wrong position but is in the word.\n4: Letter S at Position 4 is in the wrong position but is in the word.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: SLUMP"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'SLUMP'. The feedback for each letter is:\n{ \n1: Letter S at Position 1 is in the wrong position but is in the word.\n2: Letter L is not anywhere present in the word.\n3: Letter U at Position 3 is in the wrong position but is in the word.\n4: Letter M is not anywhere present in the word.\n5: Letter P is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: SUANT"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'SUANT'. The feedback for each letter is:\n{ \n1: Letter S at Position 1 is in the wrong position but is in the word.\n2: Letter U at Position 2 is in the wrong position but is in the word.\n3: Letter A is not anywhere present in the word.\n4: Letter N at Position 4 is in the wrong position but is in the word.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: SUNKY"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'SUNKY'. The feedback for each letter is:\n{ \n1: Letter S at Position 1 is in the wrong position but is in the word.\n2: Letter U at Position 2 is in the wrong position but is in the word.\n3: Letter N at Position 3 is in the word and at the correct position.\n4: Letter K is not anywhere present in the word.\n5: Letter Y is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is minus"
+        }
+    ],
+    "15": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: HEART"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HEART'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter E at Position 2 is in the word and at the correct position.\n3: Letter A at Position 3 is in the word and at the correct position.\n4: Letter R is not anywhere present in the word.\n5: Letter T at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: HEADS"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HEADS'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter E at Position 2 is in the word and at the correct position.\n3: Letter A at Position 3 is in the word and at the correct position.\n4: Letter D is not anywhere present in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: HEALS"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HEALS'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter E at Position 2 is in the word and at the correct position.\n3: Letter A at Position 3 is in the word and at the correct position.\n4: Letter L is not anywhere present in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: HEART"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HEART'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter E at Position 2 is in the word and at the correct position.\n3: Letter A at Position 3 is in the word and at the correct position.\n4: Letter R is not anywhere present in the word.\n5: Letter T at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is death"
+        }
+    ],
+    "16": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: HORSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HORSE'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter R at Position 3 is in the word and at the correct position.\n4: Letter S is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: HRAFT"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HRAFT'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter R at Position 2 is in the wrong position but is in the word.\n3: Letter A is not anywhere present in the word.\n4: Letter F is not anywhere present in the word.\n5: Letter T at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: TRASH"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TRASH'. The feedback for each letter is:\n{ \n1: Letter T at Position 1 is in the wrong position but is in the word.\n2: Letter R at Position 2 is in the wrong position but is in the word.\n3: Letter A is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter H at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: TRAIN"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TRAIN'. The feedback for each letter is:\n{ \n1: Letter T at Position 1 is in the wrong position but is in the word.\n2: Letter R at Position 2 is in the wrong position but is in the word.\n3: Letter A is not anywhere present in the word.\n4: Letter I is not anywhere present in the word.\n5: Letter N is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is birth"
+        }
+    ],
+    "17": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter U at Position 3 is in the word and at the correct position.\n4: Letter S at Position 4 is in the wrong position but is in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: MOIST\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'MOIST'. The feedback for each letter is:\n{ \n1: Letter M is not anywhere present in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter I is not anywhere present in the word.\n4: Letter S at Position 4 is in the wrong position but is in the word.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: MOORS\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'MOORS'. The feedback for each letter is:\n{ \n1: Letter M is not anywhere present in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter O is not anywhere present in the word.\n4: Letter R is not anywhere present in the word.\n5: Letter S at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: BOOPS\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'BOOPS'. The feedback for each letter is:\n{ \n1: Letter B is not anywhere present in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter O is not anywhere present in the word.\n4: Letter P is not anywhere present in the word.\n5: Letter S at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: COOPS\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'COOPS'. The feedback for each letter is:\n{ \n1: Letter C is not anywhere present in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter O is not anywhere present in the word.\n4: Letter P is not anywhere present in the word.\n5: Letter S at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is sound"
+        }
+    ],
+    "18": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: TRANE\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TRANE'. The feedback for each letter is:\n{ \n1: Letter T is not anywhere present in the word.\n2: Letter R is not anywhere present in the word.\n3: Letter A is not anywhere present in the word.\n4: Letter N is not anywhere present in the word.\n5: Letter E at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: STEEP\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'STEEP'. The feedback for each letter is:\n{ \n1: Letter S is not anywhere present in the word.\n2: Letter T is not anywhere present in the word.\n3: Letter E at Position 3 is in the word and at the correct position.\n4: Letter E is not anywhere present in the word.\n5: Letter P is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: GREET\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'GREET'. The feedback for each letter is:\n{ \n1: Letter G is not anywhere present in the word.\n2: Letter R is not anywhere present in the word.\n3: Letter E at Position 3 is in the word and at the correct position.\n4: Letter E is not anywhere present in the word.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: GLEET\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'GLEET'. The feedback for each letter is:\n{ \n1: Letter G is not anywhere present in the word.\n2: Letter L at Position 2 is in the wrong position but is in the word.\n3: Letter E at Position 3 is in the word and at the correct position.\n4: Letter E is not anywhere present in the word.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is yield"
+        }
+    ],
+    "19": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter S at Position 4 is in the word and at the correct position.\n5: Letter E at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: SHINE\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'SHINE'. The feedback for each letter is:\n{ \n1: Letter S at Position 1 is in the wrong position but is in the word.\n2: Letter H at Position 2 is in the word and at the correct position.\n3: Letter I is not anywhere present in the word.\n4: Letter N is not anywhere present in the word.\n5: Letter E at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: SHORE\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'SHORE'. The feedback for each letter is:\n{ \n1: Letter S at Position 1 is in the wrong position but is in the word.\n2: Letter H at Position 2 is in the word and at the correct position.\n3: Letter O is not anywhere present in the word.\n4: Letter R is not anywhere present in the word.\n5: Letter E at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: HEART\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HEART'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter E at Position 2 is in the wrong position but is in the word.\n3: Letter A is not anywhere present in the word.\n4: Letter R is not anywhere present in the word.\n5: Letter T at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: HERET\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HERET'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter E at Position 2 is in the wrong position but is in the word.\n3: Letter R is not anywhere present in the word.\n4: Letter E at Position 4 is in the wrong position but is in the word.\n5: Letter T at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is chest"
+        }
+    ],
+    "20": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O at Position 2 is in the wrong position but is in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: MOLES\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'MOLES'. The feedback for each letter is:\n{ \n1: Letter M is not anywhere present in the word.\n2: Letter O at Position 2 is in the wrong position but is in the word.\n3: Letter L is not anywhere present in the word.\n4: Letter E at Position 4 is in the wrong position but is in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: TOLES\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TOLES'. The feedback for each letter is:\n{ \n1: Letter T is not anywhere present in the word.\n2: Letter O at Position 2 is in the wrong position but is in the word.\n3: Letter L is not anywhere present in the word.\n4: Letter E at Position 4 is in the wrong position but is in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: BOATE\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'BOATE'. The feedback for each letter is:\n{ \n1: Letter B at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the wrong position but is in the word.\n3: Letter A is not anywhere present in the word.\n4: Letter T is not anywhere present in the word.\n5: Letter E at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: BHONE\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'BHONE'. The feedback for each letter is:\n{ \n1: Letter B at Position 1 is in the wrong position but is in the word.\n2: Letter H is not anywhere present in the word.\n3: Letter O at Position 3 is in the word and at the correct position.\n4: Letter N is not anywhere present in the word.\n5: Letter E at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is globe"
+        }
+    ],
+    "21": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter U is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: HORSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HORSE'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter R is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: HOIST"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOIST'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter I is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: HOLDS"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOLDS'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter L is not anywhere present in the word.\n4: Letter D is not anywhere present in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: HOLDY"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOLDY'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter L is not anywhere present in the word.\n4: Letter D is not anywhere present in the word.\n5: Letter Y is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is coach"
+        }
+    ],
+    "22": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: BREAD"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'BREAD'. The feedback for each letter is:\n{ \n1: Letter B is not anywhere present in the word.\n2: Letter R is not anywhere present in the word.\n3: Letter E is not anywhere present in the word.\n4: Letter A is not anywhere present in the word.\n5: Letter D at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: FLINT\n\n(Note: I'm trying to use the hint that the letter D is in the word, but not in the correct position)"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'FLINT'. The feedback for each letter is:\n{ \n1: Letter F is not anywhere present in the word.\n2: Letter L is not anywhere present in the word.\n3: Letter I at Position 3 is in the word and at the correct position.\n4: Letter N at Position 4 is in the word and at the correct position.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: INKED\n\n(Note: I'm trying to build on the correct positions of the letters I and N, and trying to use the hint that the letter D is in the word, but not in the correct position)"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'INKED'. The feedback for each letter is:\n{ \n1: Letter I at Position 1 is in the wrong position but is in the word.\n2: Letter N at Position 2 is in the wrong position but is in the word.\n3: Letter K is not anywhere present in the word.\n4: Letter E is not anywhere present in the word.\n5: Letter D is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: DINED\n\n(Note: I'm trying to correct the positions of the letters I and N, and trying to use the hint that the letter D is in the word, but not in the correct position)"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'DINED'. The feedback for each letter is:\n{ \n1: Letter D at Position 1 is in the word and at the correct position.\n2: Letter I at Position 2 is in the wrong position but is in the word.\n3: Letter N at Position 3 is in the wrong position but is in the word.\n4: Letter E is not anywhere present in the word.\n5: Letter D is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is dying"
+        }
+    ],
+    "23": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O at Position 2 is in the wrong position but is in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: MOLES"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'MOLES'. The feedback for each letter is:\n{ \n1: Letter M is not anywhere present in the word.\n2: Letter O at Position 2 is in the wrong position but is in the word.\n3: Letter L is not anywhere present in the word.\n4: Letter E at Position 4 is in the wrong position but is in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: TOLES"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TOLES'. The feedback for each letter is:\n{ \n1: Letter T is not anywhere present in the word.\n2: Letter O at Position 2 is in the wrong position but is in the word.\n3: Letter L is not anywhere present in the word.\n4: Letter E at Position 4 is in the wrong position but is in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: ROATE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'ROATE'. The feedback for each letter is:\n{ \n1: Letter R at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the wrong position but is in the word.\n3: Letter A is not anywhere present in the word.\n4: Letter T is not anywhere present in the word.\n5: Letter E at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: ROEVE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'ROEVE'. The feedback for each letter is:\n{ \n1: Letter R at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the wrong position but is in the word.\n3: Letter E at Position 3 is in the wrong position but is in the word.\n4: Letter V is not anywhere present in the word.\n5: Letter E at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is broke"
+        }
+    ],
+    "24": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U at Position 3 is in the wrong position but is in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: TRUST\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TRUST'. The feedback for each letter is:\n{ \n1: Letter T is not anywhere present in the word.\n2: Letter R at Position 2 is in the wrong position but is in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: RANCH\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'RANCH'. The feedback for each letter is:\n{ \n1: Letter R at Position 1 is in the wrong position but is in the word.\n2: Letter A at Position 2 is in the wrong position but is in the word.\n3: Letter N is not anywhere present in the word.\n4: Letter C is not anywhere present in the word.\n5: Letter H is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: ARTER\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'ARTER'. The feedback for each letter is:\n{ \n1: Letter A at Position 1 is in the wrong position but is in the word.\n2: Letter R at Position 2 is in the wrong position but is in the word.\n3: Letter T is not anywhere present in the word.\n4: Letter E is not anywhere present in the word.\n5: Letter R at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: RATER\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'RATER'. The feedback for each letter is:\n{ \n1: Letter R at Position 1 is in the wrong position but is in the word.\n2: Letter A at Position 2 is in the wrong position but is in the word.\n3: Letter T is not anywhere present in the word.\n4: Letter E is not anywhere present in the word.\n5: Letter R at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is guard"
+        }
+    ],
+    "25": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: GRAZE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'GRAZE'. The feedback for each letter is:\n{ \n1: Letter G is not anywhere present in the word.\n2: Letter R at Position 2 is in the wrong position but is in the word.\n3: Letter A at Position 3 is in the wrong position but is in the word.\n4: Letter Z is not anywhere present in the word.\n5: Letter E at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: TRANE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TRANE'. The feedback for each letter is:\n{ \n1: Letter T at Position 1 is in the wrong position but is in the word.\n2: Letter R at Position 2 is in the wrong position but is in the word.\n3: Letter A is not anywhere present in the word.\n4: Letter N is not anywhere present in the word.\n5: Letter E at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: TREND"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TREND'. The feedback for each letter is:\n{ \n1: Letter T at Position 1 is in the wrong position but is in the word.\n2: Letter R at Position 2 is in the wrong position but is in the word.\n3: Letter E at Position 3 is in the wrong position but is in the word.\n4: Letter N is not anywhere present in the word.\n5: Letter D is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: TREEF\n\n(Note: I'm trying to keep the correct letters in the correct positions, and adjusting the incorrect ones)"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TREEF'. The feedback for each letter is:\n{ \n1: Letter T at Position 1 is in the wrong position but is in the word.\n2: Letter R at Position 2 is in the wrong position but is in the word.\n3: Letter E at Position 3 is in the wrong position but is in the word.\n4: Letter E at Position 4 is in the word and at the correct position.\n5: Letter F is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is alter"
+        }
+    ],
+    "26": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: BREAD"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'BREAD'. The feedback for each letter is:\n{ \n1: Letter B is not anywhere present in the word.\n2: Letter R at Position 2 is in the word and at the correct position.\n3: Letter E is not anywhere present in the word.\n4: Letter A at Position 4 is in the wrong position but is in the word.\n5: Letter D is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: RAILS"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'RAILS'. The feedback for each letter is:\n{ \n1: Letter R at Position 1 is in the wrong position but is in the word.\n2: Letter A at Position 2 is in the wrong position but is in the word.\n3: Letter I is not anywhere present in the word.\n4: Letter L is not anywhere present in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: TRAPS"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TRAPS'. The feedback for each letter is:\n{ \n1: Letter T at Position 1 is in the word and at the correct position.\n2: Letter R at Position 2 is in the word and at the correct position.\n3: Letter A at Position 3 is in the word and at the correct position.\n4: Letter P is not anywhere present in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: TRAIT"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TRAIT'. The feedback for each letter is:\n{ \n1: Letter T at Position 1 is in the word and at the correct position.\n2: Letter R at Position 2 is in the word and at the correct position.\n3: Letter A at Position 3 is in the word and at the correct position.\n4: Letter I is not anywhere present in the word.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is track"
+        }
+    ],
+    "27": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter U is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: MOIST\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'MOIST'. The feedback for each letter is:\n{ \n1: Letter M is not anywhere present in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter I is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter T at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: MOATE\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'MOATE'. The feedback for each letter is:\n{ \n1: Letter M is not anywhere present in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter A at Position 3 is in the wrong position but is in the word.\n4: Letter T at Position 4 is in the wrong position but is in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: MOANT\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'MOANT'. The feedback for each letter is:\n{ \n1: Letter M is not anywhere present in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter A at Position 3 is in the wrong position but is in the word.\n4: Letter N is not anywhere present in the word.\n5: Letter T at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: MOATR\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'MOATR'. The feedback for each letter is:\n{ \n1: Letter M is not anywhere present in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter A at Position 3 is in the wrong position but is in the word.\n4: Letter T at Position 4 is in the wrong position but is in the word.\n5: Letter R is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is total"
+        }
+    ],
+    "28": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter U at Position 3 is in the word and at the correct position.\n4: Letter S is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: HOUND"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUND'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter U at Position 3 is in the word and at the correct position.\n4: Letter N is not anywhere present in the word.\n5: Letter D is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: HOLVE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOLVE'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter L is not anywhere present in the word.\n4: Letter V is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: HOUGH"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUGH'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter U at Position 3 is in the word and at the correct position.\n4: Letter G at Position 4 is in the word and at the correct position.\n5: Letter H at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "I think I've got it!\n\nMy next guess is: (no need to guess, I think I've solved it!)\n\nThe correct answer is: HOUGH\n\n Congratulations, I solved it!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUGH'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter U at Position 3 is in the word and at the correct position.\n4: Letter G at Position 4 is in the word and at the correct position.\n5: Letter H at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is tough"
+        }
+    ],
+    "29": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter S at Position 4 is in the wrong position but is in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: STAGE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'STAGE'. The feedback for each letter is:\n{ \n1: Letter S at Position 1 is in the word and at the correct position.\n2: Letter T at Position 2 is in the word and at the correct position.\n3: Letter A is not anywhere present in the word.\n4: Letter G is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: START"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'START'. The feedback for each letter is:\n{ \n1: Letter S at Position 1 is in the word and at the correct position.\n2: Letter T at Position 2 is in the word and at the correct position.\n3: Letter A is not anywhere present in the word.\n4: Letter R is not anywhere present in the word.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: STEPS"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'STEPS'. The feedback for each letter is:\n{ \n1: Letter S at Position 1 is in the word and at the correct position.\n2: Letter T at Position 2 is in the word and at the correct position.\n3: Letter E is not anywhere present in the word.\n4: Letter P is not anywhere present in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: STINT"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'STINT'. The feedback for each letter is:\n{ \n1: Letter S at Position 1 is in the word and at the correct position.\n2: Letter T at Position 2 is in the word and at the correct position.\n3: Letter I at Position 3 is in the word and at the correct position.\n4: Letter N is not anywhere present in the word.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is still"
+        }
+    ],
+    "30": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U at Position 3 is in the wrong position but is in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: TRUST\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TRUST'. The feedback for each letter is:\n{ \n1: Letter T is not anywhere present in the word.\n2: Letter R at Position 2 is in the word and at the correct position.\n3: Letter U at Position 3 is in the wrong position but is in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: RANCH\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'RANCH'. The feedback for each letter is:\n{ \n1: Letter R at Position 1 is in the wrong position but is in the word.\n2: Letter A at Position 2 is in the wrong position but is in the word.\n3: Letter N is not anywhere present in the word.\n4: Letter C is not anywhere present in the word.\n5: Letter H is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: ARROW\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'ARROW'. The feedback for each letter is:\n{ \n1: Letter A at Position 1 is in the wrong position but is in the word.\n2: Letter R at Position 2 is in the word and at the correct position.\n3: Letter R is not anywhere present in the word.\n4: Letter O is not anywhere present in the word.\n5: Letter W is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: RAILS\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'RAILS'. The feedback for each letter is:\n{ \n1: Letter R at Position 1 is in the wrong position but is in the word.\n2: Letter A at Position 2 is in the wrong position but is in the word.\n3: Letter I is not anywhere present in the word.\n4: Letter L is not anywhere present in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is fraud"
+        }
+    ],
+    "31": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: HEART"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HEART'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter E at Position 2 is in the word and at the correct position.\n3: Letter A at Position 3 is in the word and at the correct position.\n4: Letter R is not anywhere present in the word.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: HEADS"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HEADS'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter E at Position 2 is in the word and at the correct position.\n3: Letter A at Position 3 is in the word and at the correct position.\n4: Letter D is not anywhere present in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: HEALS"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HEALS'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter E at Position 2 is in the word and at the correct position.\n3: Letter A at Position 3 is in the word and at the correct position.\n4: Letter L is not anywhere present in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: HASTE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HASTE'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter A at Position 2 is in the wrong position but is in the word.\n3: Letter S is not anywhere present in the word.\n4: Letter T is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is teach"
+        }
+    ],
+    "32": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter U is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: MOIST"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'MOIST'. The feedback for each letter is:\n{ \n1: Letter M at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter I is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: MOANS"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'MOANS'. The feedback for each letter is:\n{ \n1: Letter M at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter A at Position 3 is in the wrong position but is in the word.\n4: Letter N at Position 4 is in the wrong position but is in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: MOATE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'MOATE'. The feedback for each letter is:\n{ \n1: Letter M at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter A at Position 3 is in the wrong position but is in the word.\n4: Letter T is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: MOACK"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'MOACK'. The feedback for each letter is:\n{ \n1: Letter M at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter A at Position 3 is in the wrong position but is in the word.\n4: Letter C is not anywhere present in the word.\n5: Letter K is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is roman"
+        }
+    ],
+    "33": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter S at Position 4 is in the wrong position but is in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: START\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'START'. The feedback for each letter is:\n{ \n1: Letter S at Position 1 is in the word and at the correct position.\n2: Letter T at Position 2 is in the wrong position but is in the word.\n3: Letter A is not anywhere present in the word.\n4: Letter R is not anywhere present in the word.\n5: Letter T at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nWith the new information, my next guess is: STINT\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'STINT'. The feedback for each letter is:\n{ \n1: Letter S at Position 1 is in the word and at the correct position.\n2: Letter T at Position 2 is in the wrong position but is in the word.\n3: Letter I at Position 3 is in the wrong position but is in the word.\n4: Letter N is not anywhere present in the word.\n5: Letter T at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nWith the new information, my next guess is: STAPT\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'STAPT'. The feedback for each letter is:\n{ \n1: Letter S at Position 1 is in the word and at the correct position.\n2: Letter T at Position 2 is in the wrong position but is in the word.\n3: Letter A is not anywhere present in the word.\n4: Letter P is not anywhere present in the word.\n5: Letter T at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nWith the new information, my next guess is: SPANT\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'SPANT'. The feedback for each letter is:\n{ \n1: Letter S at Position 1 is in the word and at the correct position.\n2: Letter P at Position 2 is in the word and at the correct position.\n3: Letter A is not anywhere present in the word.\n4: Letter N is not anywhere present in the word.\n5: Letter T at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is split"
+        }
+    ],
+    "34": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: FLUTE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'FLUTE'. The feedback for each letter is:\n{ \n1: Letter F at Position 1 is in the word and at the correct position.\n2: Letter L at Position 2 is in the wrong position but is in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter T is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: FROST"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'FROST'. The feedback for each letter is:\n{ \n1: Letter F at Position 1 is in the word and at the correct position.\n2: Letter R is not anywhere present in the word.\n3: Letter O is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: FABLE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'FABLE'. The feedback for each letter is:\n{ \n1: Letter F at Position 1 is in the word and at the correct position.\n2: Letter A at Position 2 is in the wrong position but is in the word.\n3: Letter B is not anywhere present in the word.\n4: Letter L at Position 4 is in the wrong position but is in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: FALTS"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'FALTS'. The feedback for each letter is:\n{ \n1: Letter F at Position 1 is in the word and at the correct position.\n2: Letter A at Position 2 is in the wrong position but is in the word.\n3: Letter L at Position 3 is in the wrong position but is in the word.\n4: Letter T is not anywhere present in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is final"
+        }
+    ],
+    "35": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U at Position 3 is in the wrong position but is in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: HUNCH\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HUNCH'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter U at Position 2 is in the word and at the correct position.\n3: Letter N at Position 3 is in the word and at the correct position.\n4: Letter C at Position 4 is in the word and at the correct position.\n5: Letter H at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Exciting!\n\nWith the correct positions of U, N, C, and H, my next guess is: HUNCH (since it's already correct!)\n\nLet me know if I've solved it or not!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HUNCH'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter U at Position 2 is in the word and at the correct position.\n3: Letter N at Position 3 is in the word and at the correct position.\n4: Letter C at Position 4 is in the word and at the correct position.\n5: Letter H at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Since my previous guess was correct, I'll try to adjust the first letter to get the correct position. My next guess is: UNCHS\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'UNCHS'. The feedback for each letter is:\n{ \n1: Letter U at Position 1 is in the wrong position but is in the word.\n2: Letter N at Position 2 is in the wrong position but is in the word.\n3: Letter C at Position 3 is in the wrong position but is in the word.\n4: Letter H at Position 4 is in the wrong position but is in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "With the feedback, I'll try to adjust the positions of U, N, C, and H. My next guess is: CHUNK\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'CHUNK'. The feedback for each letter is:\n{ \n1: Letter C at Position 1 is in the wrong position but is in the word.\n2: Letter H at Position 2 is in the wrong position but is in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter N at Position 4 is in the wrong position but is in the word.\n5: Letter K is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is lunch"
+        }
+    ],
+    "36": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter S at Position 4 is in the wrong position but is in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: STAMP\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'STAMP'. The feedback for each letter is:\n{ \n1: Letter S at Position 1 is in the word and at the correct position.\n2: Letter T is not anywhere present in the word.\n3: Letter A is not anywhere present in the word.\n4: Letter M is not anywhere present in the word.\n5: Letter P is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: SANDS\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'SANDS'. The feedback for each letter is:\n{ \n1: Letter S at Position 1 is in the word and at the correct position.\n2: Letter A is not anywhere present in the word.\n3: Letter N is not anywhere present in the word.\n4: Letter D is not anywhere present in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: START\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'START'. The feedback for each letter is:\n{ \n1: Letter S at Position 1 is in the word and at the correct position.\n2: Letter T is not anywhere present in the word.\n3: Letter A is not anywhere present in the word.\n4: Letter R is not anywhere present in the word.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: SPITE\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'SPITE'. The feedback for each letter is:\n{ \n1: Letter S at Position 1 is in the word and at the correct position.\n2: Letter P is not anywhere present in the word.\n3: Letter I at Position 3 is in the word and at the correct position.\n4: Letter T is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is skill"
+        }
+    ],
+    "37": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: FLUTE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'FLUTE'. The feedback for each letter is:\n{ \n1: Letter F is not anywhere present in the word.\n2: Letter L at Position 2 is in the wrong position but is in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter T is not anywhere present in the word.\n5: Letter E at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: LANCE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'LANCE'. The feedback for each letter is:\n{ \n1: Letter L at Position 1 is in the wrong position but is in the word.\n2: Letter A is not anywhere present in the word.\n3: Letter N is not anywhere present in the word.\n4: Letter C at Position 4 is in the wrong position but is in the word.\n5: Letter E at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: LEAPT"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'LEAPT'. The feedback for each letter is:\n{ \n1: Letter L at Position 1 is in the wrong position but is in the word.\n2: Letter E at Position 2 is in the wrong position but is in the word.\n3: Letter A is not anywhere present in the word.\n4: Letter P is not anywhere present in the word.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: ELATE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'ELATE'. The feedback for each letter is:\n{ \n1: Letter E at Position 1 is in the wrong position but is in the word.\n2: Letter L at Position 2 is in the wrong position but is in the word.\n3: Letter A is not anywhere present in the word.\n4: Letter T is not anywhere present in the word.\n5: Letter E at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is cycle"
+        }
+    ],
+    "38": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: FLUTE\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'FLUTE'. The feedback for each letter is:\n{ \n1: Letter F is not anywhere present in the word.\n2: Letter L at Position 2 is in the wrong position but is in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter T at Position 4 is in the wrong position but is in the word.\n5: Letter E at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: TABLE\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TABLE'. The feedback for each letter is:\n{ \n1: Letter T at Position 1 is in the word and at the correct position.\n2: Letter A is not anywhere present in the word.\n3: Letter B is not anywhere present in the word.\n4: Letter L at Position 4 is in the word and at the correct position.\n5: Letter E at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: TASTE\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TASTE'. The feedback for each letter is:\n{ \n1: Letter T at Position 1 is in the word and at the correct position.\n2: Letter A is not anywhere present in the word.\n3: Letter S is not anywhere present in the word.\n4: Letter T at Position 4 is in the wrong position but is in the word.\n5: Letter E at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: TRADE\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TRADE'. The feedback for each letter is:\n{ \n1: Letter T at Position 1 is in the word and at the correct position.\n2: Letter R is not anywhere present in the word.\n3: Letter A is not anywhere present in the word.\n4: Letter D is not anywhere present in the word.\n5: Letter E at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is title"
+        }
+    ],
+    "39": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter U is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: HORSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HORSE'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter R is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: HOIST"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOIST'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter I is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: HOLDS"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOLDS'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter L is not anywhere present in the word.\n4: Letter D is not anywhere present in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: HOLDY"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOLDY'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter L is not anywhere present in the word.\n4: Letter D is not anywhere present in the word.\n5: Letter Y is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is coach"
+        }
+    ],
+    "40": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter U is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: MOIST\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'MOIST'. The feedback for each letter is:\n{ \n1: Letter M is not anywhere present in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter I is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: MOODY\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'MOODY'. The feedback for each letter is:\n{ \n1: Letter M is not anywhere present in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter O is not anywhere present in the word.\n4: Letter D is not anywhere present in the word.\n5: Letter Y at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: MOONY\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'MOONY'. The feedback for each letter is:\n{ \n1: Letter M is not anywhere present in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter O is not anywhere present in the word.\n4: Letter N is not anywhere present in the word.\n5: Letter Y at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: MOBYA\n\nWait, no... I think I can do better than that!\n\nMy next guess is: MOBYE\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'MOBYE'. The feedback for each letter is:\n{ \n1: Letter M is not anywhere present in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter B is not anywhere present in the word.\n4: Letter Y at Position 4 is in the wrong position but is in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is worry"
+        }
+    ],
+    "41": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: HEART"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HEART'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter E at Position 2 is in the wrong position but is in the word.\n3: Letter A is not anywhere present in the word.\n4: Letter R at Position 4 is in the wrong position but is in the word.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: HENCE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HENCE'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter E at Position 2 is in the wrong position but is in the word.\n3: Letter N is not anywhere present in the word.\n4: Letter C is not anywhere present in the word.\n5: Letter E at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: HERET"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HERET'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter E at Position 2 is in the wrong position but is in the word.\n3: Letter R at Position 3 is in the word and at the correct position.\n4: Letter E at Position 4 is in the word and at the correct position.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: HERES"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HERES'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter E at Position 2 is in the wrong position but is in the word.\n3: Letter R at Position 3 is in the word and at the correct position.\n4: Letter E at Position 4 is in the word and at the correct position.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is threw"
+        }
+    ],
+    "42": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the wrong position but is in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: HORSE\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HORSE'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the wrong position but is in the word.\n3: Letter R is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback again!\n\nMy next guess is: HOIST\n\nLet's see if I can get closer to the correct word!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOIST'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the wrong position but is in the word.\n3: Letter I is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter T at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback again!\n\nMy next guess is: HOLDT\n\nLet's see if I can get the correct word!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOLDT'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the wrong position but is in the word.\n3: Letter L is not anywhere present in the word.\n4: Letter D is not anywhere present in the word.\n5: Letter T at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback again!\n\nMy next guess is: HOLDT (I'll try to keep the correct letters in the same positions)\n\nLet's see if I can get the correct word!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOLDT'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the wrong position but is in the word.\n3: Letter L is not anywhere present in the word.\n4: Letter D is not anywhere present in the word.\n5: Letter T at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is shoot"
+        }
+    ],
+    "43": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: HEART"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HEART'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter E at Position 2 is in the wrong position but is in the word.\n3: Letter A is not anywhere present in the word.\n4: Letter R is not anywhere present in the word.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: HEADS"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HEADS'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter E at Position 2 is in the wrong position but is in the word.\n3: Letter A is not anywhere present in the word.\n4: Letter D is not anywhere present in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: HENCE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HENCE'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter E at Position 2 is in the wrong position but is in the word.\n3: Letter N is not anywhere present in the word.\n4: Letter C is not anywhere present in the word.\n5: Letter E at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: HERET"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HERET'. The feedback for each letter is:\n{ \n1: Letter H at Position 1 is in the wrong position but is in the word.\n2: Letter E at Position 2 is in the wrong position but is in the word.\n3: Letter R is not anywhere present in the word.\n4: Letter E at Position 4 is in the wrong position but is in the word.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is shelf"
+        }
+    ],
+    "44": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U at Position 3 is in the wrong position but is in the word.\n4: Letter S at Position 4 is in the word and at the correct position.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: TRUST\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TRUST'. The feedback for each letter is:\n{ \n1: Letter T at Position 1 is in the wrong position but is in the word.\n2: Letter R is not anywhere present in the word.\n3: Letter U at Position 3 is in the wrong position but is in the word.\n4: Letter S at Position 4 is in the word and at the correct position.\n5: Letter T at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: TUNES\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TUNES'. The feedback for each letter is:\n{ \n1: Letter T at Position 1 is in the wrong position but is in the word.\n2: Letter U at Position 2 is in the word and at the correct position.\n3: Letter N is not anywhere present in the word.\n4: Letter E at Position 4 is in the wrong position but is in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: TURST\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TURST'. The feedback for each letter is:\n{ \n1: Letter T at Position 1 is in the wrong position but is in the word.\n2: Letter U at Position 2 is in the word and at the correct position.\n3: Letter R is not anywhere present in the word.\n4: Letter S at Position 4 is in the word and at the correct position.\n5: Letter T at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: TURNT\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TURNT'. The feedback for each letter is:\n{ \n1: Letter T at Position 1 is in the wrong position but is in the word.\n2: Letter U at Position 2 is in the word and at the correct position.\n3: Letter R is not anywhere present in the word.\n4: Letter N is not anywhere present in the word.\n5: Letter T at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is guest"
+        }
+    ],
+    "45": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter S at Position 4 is in the wrong position but is in the word.\n5: Letter E at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: STAGE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'STAGE'. The feedback for each letter is:\n{ \n1: Letter S at Position 1 is in the wrong position but is in the word.\n2: Letter T is not anywhere present in the word.\n3: Letter A is not anywhere present in the word.\n4: Letter G is not anywhere present in the word.\n5: Letter E at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: SEINE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'SEINE'. The feedback for each letter is:\n{ \n1: Letter S at Position 1 is in the wrong position but is in the word.\n2: Letter E at Position 2 is in the wrong position but is in the word.\n3: Letter I at Position 3 is in the word and at the correct position.\n4: Letter N is not anywhere present in the word.\n5: Letter E at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: SIEGE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'SIEGE'. The feedback for each letter is:\n{ \n1: Letter S at Position 1 is in the wrong position but is in the word.\n2: Letter I at Position 2 is in the wrong position but is in the word.\n3: Letter E at Position 3 is in the wrong position but is in the word.\n4: Letter G is not anywhere present in the word.\n5: Letter E at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: SIEPE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'SIEPE'. The feedback for each letter is:\n{ \n1: Letter S at Position 1 is in the wrong position but is in the word.\n2: Letter I at Position 2 is in the wrong position but is in the word.\n3: Letter E at Position 3 is in the wrong position but is in the word.\n4: Letter P is not anywhere present in the word.\n5: Letter E at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is aside"
+        }
+    ],
+    "46": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: BREAD"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'BREAD'. The feedback for each letter is:\n{ \n1: Letter B is not anywhere present in the word.\n2: Letter R at Position 2 is in the word and at the correct position.\n3: Letter E is not anywhere present in the word.\n4: Letter A at Position 4 is in the wrong position but is in the word.\n5: Letter D is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: RAILS"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'RAILS'. The feedback for each letter is:\n{ \n1: Letter R at Position 1 is in the wrong position but is in the word.\n2: Letter A at Position 2 is in the wrong position but is in the word.\n3: Letter I is not anywhere present in the word.\n4: Letter L is not anywhere present in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: TRAPS"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TRAPS'. The feedback for each letter is:\n{ \n1: Letter T at Position 1 is in the wrong position but is in the word.\n2: Letter R at Position 2 is in the word and at the correct position.\n3: Letter A at Position 3 is in the word and at the correct position.\n4: Letter P is not anywhere present in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback.\n\nMy next guess is: RATCH"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'RATCH'. The feedback for each letter is:\n{ \n1: Letter R at Position 1 is in the wrong position but is in the word.\n2: Letter A at Position 2 is in the wrong position but is in the word.\n3: Letter T at Position 3 is in the wrong position but is in the word.\n4: Letter C is not anywhere present in the word.\n5: Letter H is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is craft"
+        }
+    ],
+    "47": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: TABLE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TABLE'. The feedback for each letter is:\n{ \n1: Letter T is not anywhere present in the word.\n2: Letter A at Position 2 is in the word and at the correct position.\n3: Letter B at Position 3 is in the word and at the correct position.\n4: Letter L at Position 4 is in the wrong position but is in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: ANGLE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'ANGLE'. The feedback for each letter is:\n{ \n1: Letter A at Position 1 is in the wrong position but is in the word.\n2: Letter N is not anywhere present in the word.\n3: Letter G is not anywhere present in the word.\n4: Letter L at Position 4 is in the wrong position but is in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: BARGE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'BARGE'. The feedback for each letter is:\n{ \n1: Letter B at Position 1 is in the wrong position but is in the word.\n2: Letter A at Position 2 is in the word and at the correct position.\n3: Letter R is not anywhere present in the word.\n4: Letter G is not anywhere present in the word.\n5: Letter E at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: ABATE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'ABATE'. The feedback for each letter is:\n{ \n1: Letter A at Position 1 is in the wrong position but is in the word.\n2: Letter B at Position 2 is in the wrong position but is in the word.\n3: Letter A is not anywhere present in the word.\n4: Letter T is not anywhere present in the word.\n5: Letter E at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is label"
+        }
+    ],
+    "48": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter U at Position 3 is in the word and at the correct position.\n4: Letter S at Position 4 is in the wrong position but is in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: TRUST\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TRUST'. The feedback for each letter is:\n{ \n1: Letter T at Position 1 is in the wrong position but is in the word.\n2: Letter R is not anywhere present in the word.\n3: Letter U at Position 3 is in the word and at the correct position.\n4: Letter S is not anywhere present in the word.\n5: Letter T at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: TUNES\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TUNES'. The feedback for each letter is:\n{ \n1: Letter T at Position 1 is in the wrong position but is in the word.\n2: Letter U at Position 2 is in the wrong position but is in the word.\n3: Letter N is not anywhere present in the word.\n4: Letter E is not anywhere present in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: TUNTS\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TUNTS'. The feedback for each letter is:\n{ \n1: Letter T at Position 1 is in the wrong position but is in the word.\n2: Letter U at Position 2 is in the wrong position but is in the word.\n3: Letter N is not anywhere present in the word.\n4: Letter T is not anywhere present in the word.\n5: Letter S is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: TURNT\n\nLet's see how it goes!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TURNT'. The feedback for each letter is:\n{ \n1: Letter T at Position 1 is in the wrong position but is in the word.\n2: Letter U at Position 2 is in the wrong position but is in the word.\n3: Letter R is not anywhere present in the word.\n4: Letter N is not anywhere present in the word.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is study"
+        }
+    ],
+    "49": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "user",
+            "content": "Enter your first guess in a format like COVER"
+        },
+        {
+            "role": "assistant",
+            "content": "My first guess is: HOUSE"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOUSE'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter U is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: MOIST\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'MOIST'. The feedback for each letter is:\n{ \n1: Letter M is not anywhere present in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter I is not anywhere present in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: BOATE\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'BOATE'. The feedback for each letter is:\n{ \n1: Letter B is not anywhere present in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter A is not anywhere present in the word.\n4: Letter T is not anywhere present in the word.\n5: Letter E at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: GOATE\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'GOATE'. The feedback for each letter is:\n{ \n1: Letter G is not anywhere present in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter A is not anywhere present in the word.\n4: Letter T is not anywhere present in the word.\n5: Letter E at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Thank you for the feedback!\n\nMy next guess is: ROATE\n\nLet me know how I did!"
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'ROATE'. The feedback for each letter is:\n{ \n1: Letter R at Position 1 is in the wrong position but is in the word.\n2: Letter O at Position 2 is in the word and at the correct position.\n3: Letter A is not anywhere present in the word.\n4: Letter T is not anywhere present in the word.\n5: Letter E at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "5 guesses exhausted! The correct answer is cover"
+        }
+    ]
+}
