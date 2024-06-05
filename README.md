@@ -16,11 +16,32 @@ huggingface-cli login
 ```
 
 ### Code Executions:
-Examples
+- 4-bit quantization
 ```bash
 python3 run_models.py \
 --model meta-llama/Meta-Llama-3-8B-Instruct \
 --num_games 50 \
 --shots 4 \
---max_turns 5
+--max_turns 5 \
+--load_4bit
+```
+
+- 8-bit quantization
+```bash
+python3 run_models.py \
+--model meta-llama/Meta-Llama-3-8B-Instruct \
+--num_games 50 \
+--shots 4 \
+--max_turns 5 \
+--load_8bit
+```
+
+- vLLM
+```bash
+python3 run_models.py \
+--model meta-llama/Meta-Llama-3-8B-Instruct \
+--num_games 50 \
+--shots 4 \
+--max_turns 5 \
+--use_vllm
 ```
