@@ -51,13 +51,6 @@ def main(args):
         conversation = p.get_few_shot_instructions(2)
         play_wordle(game, p, model, tokenizer, conversation)
 
-def play_wordle(game, p, model, tokenizer, conversation):
-    i = 0
-    while i < 6:
-        # Gameplay logic as before
-        # ... (omitted for brevity)
-        i += 1
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run the Wordle game or tests based on the language model")
     parser.add_argument("--test_eval_utils", action="store_true", help="Run evaluation utils test")
