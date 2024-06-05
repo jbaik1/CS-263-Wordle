@@ -167,9 +167,9 @@ class Conversation():
         
 
     def extract_correct_answer(self):
-        print(self.raw_convo)
+        # print(self.raw_convo)
         last = self.raw_convo[-1]['content'].split()
-        #print(last)
+        # print(last)
 
         if last[-3:-1] == ['answer', 'is']:
             return last[-1].lower()

@@ -82,7 +82,7 @@ Please enter your next guess:
     def get_zero_shot_instructions(self):
         message = [
             {"role": "system", "content": self.instructions},
-            {"role": "user", "content": "Enter your first guess in a format like COVER"},
+            {"role": "user", "content": "let's play another game. Enter your first guess in a format like COVER"},
         ]
         return message
 
@@ -118,15 +118,12 @@ Please enter your next guess:
             message.append({"role": "system", "content": f"Example #{s}:"})
             w = Wordle()
             w.set_answer(example["answer"])
-            target = example["answer"]
             history = []
             valid_letters = []
             invalid_letters = []
                 
             guesses = example["guesses"]
             message.append({"role": "user", "content": "Let's play a new game with a different word"})
-
- 
 
             # Process first guess before giving context to next guesses
             init = guesses[0]
@@ -203,7 +200,7 @@ Please enter your next guess:
                 message.append({"role": "user", "content": feedback_str})
 
         
-        message.append({"role": "user", "content": "let's play another game. Start with your random initial guess"})
+        message.append({"role": "user", "content": "let's play another game. Enter your first guess in a format like COVER"})
         
         return message
         
