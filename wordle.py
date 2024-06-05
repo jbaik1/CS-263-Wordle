@@ -38,7 +38,7 @@ class Wordle():
                 letter_count[letter_answer] -= 1
                 out.append('G')
             elif (letter_guess in answer) and (letter_count[letter_guess] > 0): # letter in word but misplaced
-                letter_count[letter_answer] -= 1
+                letter_count[letter_guess] -= 1
                 out.append('Y')
             else:
                 out.append('W')
