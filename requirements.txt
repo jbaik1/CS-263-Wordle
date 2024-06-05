@@ -1,7 +1,9 @@
 torch
 torchvision
 torchaudio
-transformers==4.34.1
+transformers
+vllm
 jupyterlab
+ipywidgets
 accelerate
 bitsandbytes
