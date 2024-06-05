@@ -16,7 +16,6 @@ def eval_num_guesses(guesses, answer):
     for i in range(len(guesses)):
         if guesses[i] == answer:
             return i+1
-    
 
     return -1 # never guessed it correctly
 
@@ -85,6 +84,7 @@ def eval_wyg(guesses, answer):
                 count_w += 1
 
     assert(N * 5 == count_g + count_y + count_w)
+    
     return count_g, count_y, count_w
 
 
@@ -149,7 +149,6 @@ def eval_info_gain(guesses, answer, word_list):
                     if letter_idx in letter_to_wrong_pos[random_letter]:
                         wrong_pos_random += 1
 
-
     return [[wrong_letter_count, wrong_letter_denom, wrong_letter_random], 
             [wrong_pos_count, wrong_pos_denom, wrong_pos_random], 
             [undo_correct_count, undo_correct_denom, undo_correct_random]]  
@@ -164,7 +163,6 @@ class Conversation():
 
         self.wordle = Wordle()
         self.wordle.set_answer(self.correct_answer)
-        
 
     def extract_correct_answer(self):
         # print(self.raw_convo)
@@ -187,12 +185,20 @@ class Conversation():
                 still_in_prompt = False
                 self.end_of_prompt = i
             if not still_in_prompt and self.raw_convo[i]['role'] == 'assistant':
-                pattern = r'[A-Z]{5}'
-                guess = re.findall(pattern, self.raw_convo[i]['content'])[-1]
-                guesses.append(guess.lower())
-        
-        # if len(guesses) > 5:
-        #     raise("too many guesses")
+                try:
+                    pattern = r'[A-Z]{5}'
+                    guess = re.findall(pattern, self.raw_convo[i]['content'])[-1]
+                    guesses.append(guess.lower())
+                except IndexError as error:
+                    # Switch to method 2 for extraction
+                    match = re.search(r"My next guess is: (\w+)", self.raw_convo[i]['content'])
+                    if match:
+                        guess = match.group(1)
+                    else:
+                        print("No guess found in the response.")
+                        print(guesses)
+                        print(self.raw_convo[i])
+                    
         return guesses
         
 def get_aggregate_scores(conversation_list):
@@ -203,7 +209,7 @@ def get_aggregate_scores(conversation_list):
     with open("words.txt", 'r') as f:
         word_list = f.read().split()
     
-    for key, convo in conversation_list.items():
+    for _, convo in conversation_list.items():
         c = Conversation(convo)
         # don't need to have accuracy cause this essentially replaces it ?
         guessnum = eval_num_guesses(c.guesses, c.correct_answer)
@@ -225,7 +231,10 @@ def get_aggregate_scores(conversation_list):
     undo_correct_random = info_gain_stats[2][2] / info_gain_stats[2][1]
 
     end_letter_level_acc = sum(end_letter_level_acc) / len(conversation_list)
-    avg_number_of_guesses = sum(num_guesses) / len(conversation_list)
+    num_guesses = np.array(num_guesses)
+    num_guesses_success = num_guesses[num_guesses >= 1]
+    success_pct = len(num_guesses_success) / len(conversation_list)
+    avg_number_of_guesses = num_guesses_success.sum() / len(num_guesses_success)
 
     print(f"Correct percentage: {correct_pct}")
     print(f"Correct letter percentage: {correct_letter_pct}")
@@ -236,6 +245,7 @@ def get_aggregate_scores(conversation_list):
     print(f"Wrong pos random: {wrong_pos_random}")
     print(f"Undo correct random: {undo_correct_random}")
     print(f"End letter level acc: {end_letter_level_acc}")
+    print(f"Success percentage: {success_pct}")
     print(f"Average number of guesses: {avg_number_of_guesses}")
 
 
@@ -284,6 +294,7 @@ def main():
     ]
     c = Conversation(example_convo)
     print(c.correct_answer, c.guesses)
+
 
 if __name__ == "__main__":
     main()
