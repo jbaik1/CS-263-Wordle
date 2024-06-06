@@ -1,8 +1,12 @@
 from wordle import Wordle
 
+
+INITIAL_POS = 1
+
+
 class Prompt_Helper():
     def __init__(self):
-        self.instructions = "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result. If the letter in the word and at the correct position intact, please keep it intact. If the letter in the word but in the wrong position, please change its position in the word. If the letter is not anywhere present in the word, please replace it with another letter."
+        self.instructions = "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a feedback. If the letter in the word and at the correct position intact, please keep it intact. If the letter in the word but in the wrong position, please change its position in the word. If the letter is not anywhere present in the word, please replace it with another letter. The guess word should be a valid english word."
         self.examples = [
             {
                 "answer": 'THREE',
@@ -33,13 +37,15 @@ class Prompt_Helper():
             return f"Congrats you found the correct word {guess} in {guess_number+1} guesses"
 
         human_readable_response = ""
+        
         for i in range(5):
+            pos = i + INITIAL_POS
             if response[i] == 'G':
-                human_readable_response += f"{i+1}: Letter {guess[i]} at Position {i+1} is in the word and at the correct position.\n"
+                human_readable_response += f"Letter {guess[i]} at Position {pos} is in the word and at the correct position.\n"
             elif response[i] == 'Y':
-                human_readable_response += f"{i+1}: Letter {guess[i]} at Position {i+1} is in the wrong position but is in the word.\n"
+                human_readable_response += f"Letter {guess[i]} at Position {pos} is in the wrong position but is in the word.\n"
             elif response[i] == 'W':
-                human_readable_response += f"{i+1}: Letter {guess[i]} is not anywhere present in the word.\n"
+                human_readable_response += f"Letter {guess[i]} at Position {pos} is not anywhere present in the word.\n"
             else:
                 raise ValueError(f"Invalid response format for {response}. Response only includes letters G, Y, or W.")
         return human_readable_response
@@ -61,13 +67,7 @@ class Prompt_Helper():
                 "correct": True
             }
         
-        feedback = f"""Feedback:
-            Your guess was: '{guess}'. The feedback for each letter is:
-            {{ 
-            {self.explanatory_response(guess, response, None)}
-            }}
-            Please enter your next guess:
-        """  
+        feedback = f"""Feedback:\nYour guess was: '{guess}'. The feedback for each letter is:\n{{\n{self.explanatory_response(guess, response, None)}\n}}\nPlease enter your next guess.\n"""  
 
         feedback_dict = {
             "feedback": feedback,
@@ -95,13 +95,7 @@ class Prompt_Helper():
                 "correct": True
             }
         
-        feedback = f"""Feedback:
-            Your guess was: '{guess}'. The feedback for each letter is:
-            {{ 
-            {self.explanatory_response(guess, response, None)}
-            }}
-            Please enter your next guess along with the explanation for the letter at each position:
-        """  
+        feedback = f"""Feedback:\nYour guess was: '{guess}'. The feedback for each letter is:\n{{ {self.explanatory_response(guess, response, None)}}}\nPlease guess a valid 5-letter English word and provie reason. Remember to output your guess in captital letters."""  
 
         feedback_dict = {
             "feedback": feedback,
@@ -117,30 +111,6 @@ class Prompt_Helper():
             {"role": "system", "content": self.instructions},
             {"role": "user", "content": "let's play another game. Enter your first guess in a format like COVER"},
         ]
-        return message
-
-    def get_few_shot_instructions_old(self, shots=2):
-        if shots < 1:
-            return self.create_zero_shot_prompt()
-        if shots > 3:
-            shots = 3
-
-        message = [{"role": "system", "content": self.instructions},]
-        for s in range(shots):
-            message.append({"role": "system", "content": f"Example #{s}:"})
-            w = Wordle()
-            w.set_answer(self.examples[s]['answer'])
-            for gnum in range(len(self.examples[s]['guesses'])):
-                guess = self.examples[s]['guesses'][gnum]
-                message.extend([
-                    {"role": "user", "content": f"Enter guess #{gnum + 1}"},
-                    {"role": "assistant", "content": guess},
-                    {"role": "user", "content": self.explanatory_response(guess, w.turn(guess), gnum)},
-                ])
-        message.extend([
-            {"role": "system", "content": "Now it is your turn"},
-            {"role": "user", "content": f"Enter guess #1"},
-        ])
         return message
     
     def load_few_shot_examples(self, shots=4):
@@ -161,18 +131,10 @@ class Prompt_Helper():
             # Process first guess before giving context to next guesses
             init = guesses[0]
 
-            init_guess_str = f"""Guess:
-                {{ 
-                    "guess: "{init}",
-                    "reasoning" : "
-                        We are starting a new game, and this is a random initial guess
-                        "
-                        
-                }}
-            """
+            init_guess_str = f"""Guess:\n{{\n"guess: "{init}",\n"reason" : "\nWe are starting a new game, and this is a random initial guess."\n}}"""
             message.append({"role": "assistant", "content": init_guess_str})
 
-            init_dict = self.jb_feedback(guess=init, response=w.turn(init), guess_number=0)
+            init_dict = self.dn_feedback(guess=init, response=w.turn(init), guess_number=0)
             init_feedback_str = init_dict["feedback"]
             valid_letters = init_dict["valid_letters"]
             invalid_letters = init_dict["invalid_letters"]
@@ -194,32 +156,11 @@ class Prompt_Helper():
                     elif color == "W":
                         position_info.append("not in the string")
 
-
                 guess = guesses[i]
-                guess_str = f"""Guess:
-                    {{ 
-                        "guess: "{guess}",
-                        "reasoning" : "
-                            The list of previously guessed words are: {history}
-                            The list of valid letters are: {valid_letters}
-                            The list of invalid letters are: {invalid_letters}
-
-                            The previous guess was: {prev_guess}
-                            Given the previous feedback, we know that
-                            1. The letter at position 1 ({prev_guess[0]}) was {position_info[0]} 
-                            2. The letter at position 2 ({prev_guess[1]}) was {position_info[1]} 
-                            3. The letter at position 3 ({prev_guess[2]}) was {position_info[2]} 
-                            4. The letter at position 4 ({prev_guess[3]}) was {position_info[3]} 
-                            5. The letter at position 5 ({prev_guess[4]}) was {position_info[4]} 
-
-                            Improving on this feedback,
-                            the new guess is {guess}
-                            " 
-                    }}
-                """
+                guess_str = f"""Guess:\n{{\n"guess: "{guess}",\n"reason" : "\nThe list of previously guessed words are: {history}\nThe list of valid letters are: {valid_letters}\nThe list of invalid letters are: {invalid_letters}\nThe previous guess was: {prev_guess}\nGiven the previous feedback, we know that\n\The letter at position {INITIAL_POS} ({prev_guess[0]}) was {position_info[0]}\n\The letter at position {INITIAL_POS + 1} ({prev_guess[1]}) was {position_info[1]}\nThe letter at position {INITIAL_POS + 2} ({prev_guess[2]}) was {position_info[2]}\nThe letter at position {INITIAL_POS + 3} ({prev_guess[3]}) was {position_info[3]}\nThe letter at position {INITIAL_POS + 4} ({prev_guess[4]}) was {position_info[4]}\nImproving on this feedback, the new guess is {guess}."}}"""
                 history.append(guess)
 
-                feedback_dict = self.jb_feedback(guess=guess, response=w.turn(guess), guess_number=i)
+                feedback_dict = self.dn_feedback(guess=guess, response=w.turn(guess), guess_number=i)
                 feedback_str = feedback_dict["feedback"]
 
                 new_valid_letters = feedback_dict["valid_letters"]

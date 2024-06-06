@@ -2,12 +2,15 @@ import random
 from collections import Counter
 
 class Wordle():
-    def __init__(self) -> None:
+    def __init__(self, idx=-1) -> None:
         word_list = open("words.txt", 'r')
         self.words = word_list.read().split()
         # we keep everything lowercase for now
         # we can change it later by explicitly telling the model to predict captical letters
-        self.answer = random.choice(self.words).lower()
+        if 0 <= idx < len(self.words):
+            self.answer = self.words[idx].lower()
+        else:
+            self.answer = random.choice(self.words).lower()
     
     def get_answer(self):
         return self.answer
@@ -38,7 +41,7 @@ class Wordle():
                 letter_count[letter_answer] -= 1
                 out.append('G')
             elif (letter_guess in answer) and (letter_count[letter_guess] > 0): # letter in word but misplaced
-                letter_count[letter_answer] -= 1
+                letter_count[letter_guess] -= 1
                 out.append('Y')
             else:
                 out.append('W')

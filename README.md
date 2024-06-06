@@ -4,6 +4,7 @@
 ```bash
 conda create -n wordle python=3.10
 conda activate wordle
+pip install flash-attn --no-build-isolation
 pip install -r requirements.txt
 ```
 

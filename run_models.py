@@ -9,18 +9,13 @@ from vllm import LLM, SamplingParams
 from wordle import Wordle
 from prompting import Prompt_Helper
 
+
 def save_conversations(conversations, outfile):
     print("outfile:", outfile)
     with open(outfile, "w") as f:
         json.dump(conversations, f, indent=4)
 
 def extract_json_guess(json_string):
-    # Example
-    # {
-    #     "turn_type" : "Guess",
-    #     "guess" : "?", 
-    #     "reason" : "Random initial guess"
-    # }
     guess_idx = json_string.find("guess")
     remaining = json_string[guess_idx+len('guess'):]
     end = remaining.find("\n")
@@ -32,7 +27,7 @@ def extract_json_guess(json_string):
     
     return guess
 
-def extract_guess(string):
+def extract_guess(string, list_prev=None):
     if len(string) == 5:
         # Extracted Guess (Method 1)
         return string
@@ -42,7 +37,27 @@ def extract_guess(string):
     else:
         # Extracted Guess (Method 2)
         pattern = r'[A-Z]{5}'
-        return re.findall(pattern, string)[-1]
+        
+        if list_prev is None:
+            return re.findall(pattern, string)[-1]
+        else:
+            for match in re.findall(pattern, string)[::-1]:
+                if match not in list_prev:
+                    return match
+            
+            # Handle some extraordinary cases, 
+            # if the model does not output 5 capital letters
+            match = re.search(r"guess is.* (\w+)", string)
+            if match and len(match.group(1)) == 5:
+                return match.group(1)
+            else:
+                pattern = r'[A-Z]{2,}'
+                for match in re.findall(pattern, string)[::-1]:
+                    if match not in list_prev:
+                        return match
+                    
+                print(f"No 5-letter guess found in the response or your new guess is identical to the previous guess. {string}")
+                return ''
 
 def merge_consecutive_roles(json_data):
     merged_data = [json_data[0]]
@@ -109,15 +124,14 @@ def main(args):
     else:
         starting_conversation = p.load_few_shot_examples(shots=args.shots)
     
-    # print(starting_conversation)
-
-    
     conversations = {}
     for game_idx in tqdm(range(args.num_games)):
-        game = Wordle()
+        game = Wordle(game_idx)
         conversation = starting_conversation.copy()
 
         victory = False
+        list_guess_str = []
+        
         for turn_idx in range(args.max_turns):
             if args.model == "meta-llama/Llama-2-13b-chat-hf":
                 ## Llama 2 throws an error if there are two consecutive contents from the same role
@@ -126,12 +140,12 @@ def main(args):
             if args.use_vllm:
                 stop_tokens = ["Question:", "Question", "USER:", "USER", "ASSISTANT:", "ASSISTANT", "Instruction:", "Instruction", "Response:", "Response", "### Instruction"]
                 sampling_params = SamplingParams(
-                    temperature=0.3, 
-                    top_p=0.9, 
+                    temperature=0, 
+                    top_p=1, 
                     max_tokens=500, 
                     stop=stop_tokens)
                 inputs = tokenizer.apply_chat_template(conversation, add_generation_prompt=True, tokenize=False)
-                outputs = model.generate(inputs, sampling_params)
+                outputs = model.generate(inputs, sampling_params, use_tqdm=False)
                 response_str = outputs[0].outputs[0].text
             else:
                 input_ids = tokenizer.apply_chat_template(
@@ -163,23 +177,33 @@ def main(args):
 
             # Evaluate model output and give feedback
             guess_eval = ""
+            
             try:
-                guess_str = extract_guess(response_str)
-                guess_eval = game.turn(guess_str)
-                user_response = p.jb_feedback(guess_str, guess_eval, turn_idx)["feedback"]
-                conversation.extend([
-                    {'role': 'assistant', 'content': response_str},
-                    {'role': 'user', 'content': user_response}
-                ])
-            except ValueError as error:
-                print("VALUE ERROR GAME:", error)
-                print(response_str)
+                guess_str = extract_guess(response_str, list_guess_str)[:5]
+                if guess_str == '':
+                    conversation.extend([
+                        {'role': 'assistant', 'content': response_str},
+                        {'role': 'user', 'content': 'Your previous guess is not valid or repeated. Please guess a valid 5-letter English word and provie reason. Remember to output your guess in captital letters.'}
+                    ])
+                elif len(guess_str) != 5:
+                    conversation.extend([
+                        {'role': 'assistant', 'content': response_str},
+                        {'role': 'user', 'content': f'Your previous guess {guess_str} is not valid or repeated. Please guess a valid 5-letter English word and provie reason. Remember to output your guess in captital letters.'}
+                    ])
+                    list_guess_str.append(guess_str)
+                else:
+                    guess_eval = game.turn(guess_str)
+                    user_response = p.dn_feedback(guess_str, guess_eval, turn_idx)["feedback"]
+                    conversation.extend([
+                        {'role': 'assistant', 'content': response_str},
+                        {'role': 'user', 'content': user_response}
+                    ])
+                    list_guess_str.append(guess_str)
+            except Exception as error:
+                print("Error:", error)
+                print("Raw response:", response_str)
+                print("Extracted guess:", guess_str)
                 break
-            except IndexError as error:
-                print("INDEX ERROR GAME:", error)
-                print(response_str)
-                break
-
 
             if guess_eval == 'GGGGG':
                 conversation.append({'role': 'system', 'content': f"Correct! The answer is {game.get_answer()}"})
@@ -199,6 +223,8 @@ def main(args):
             model_name = "llama_3"
         elif args.model == "meta-llama/Llama-2-13b-chat-hf":
             model_name = "llama_2"
+        elif args.model == "HuggingFaceH4/zephyr-7b-beta":
+            model_name = "zephyr_beta"
         else:
             model_name = "notllama"
     outfile = f"outputs/conversations_{model_name}_{args.shots}shot_{args.max_turns}_turns_{args.num_games}games.json"
@@ -214,9 +240,5 @@ if __name__ == "__main__":
     parser.add_argument("--use_vllm", action="store_true", help="Whether to use VLLM to speedup inference")
     parser.add_argument("--load_4bit", action="store_true", help="Load model in 4-bit quantization")
     parser.add_argument("--load_8bit", action="store_true", help="Load model in 8-bit quantization")
-    # parser.add_argument("--test_eval_utils", action="store_true", help="Run evaluation utils test")
-    # parser.add_argument("--test_phi_dataset", action="store_true", help="Run Phi dataset test")
-    # parser.add_argument("--annotations_filepath", type=str, help="Path to the annotations file for Phi dataset test")
-    # parser.add_argument("--prompt_type", type=str, help="Type of prompt for Phi dataset test")
     args = parser.parse_args()
     main(args)

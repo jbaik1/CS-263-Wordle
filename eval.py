@@ -188,16 +188,17 @@ class Conversation():
                 try:
                     pattern = r'[A-Z]{5}'
                     guess = re.findall(pattern, self.raw_convo[i]['content'])[-1]
-                    guesses.append(guess.lower())
+                    guesses.append(guess.lower()[:5])
                 except IndexError as error:
-                    # Switch to method 2 for extraction
-                    match = re.search(r"My next guess is: (\w+)", self.raw_convo[i]['content'])
+                    # Switch to another pattern for extraction
+                    match = re.search(r"guess is.* (\w{5})", self.raw_convo[i]['content'])
                     if match:
                         guess = match.group(1)
+                        guesses.append(guess.lower()[:5])
                     else:
                         print("No guess found in the response.")
-                        print(guesses)
-                        print(self.raw_convo[i])
+                        # print(guesses)
+                        # print(self.raw_convo[i])
                     
         return guesses
         
@@ -205,7 +206,7 @@ def get_aggregate_scores(conversation_list):
     GYW = np.zeros(3)
     info_gain_stats = np.zeros((3, 3))
     num_guesses = []
-    end_letter_level_acc = []
+    end_letter_acc = []
     with open("words.txt", 'r') as f:
         word_list = f.read().split()
     
@@ -217,7 +218,7 @@ def get_aggregate_scores(conversation_list):
             num_guesses.append(guessnum)
         GYW = GYW + np.array(eval_wyg(c.guesses, c.correct_answer)) #element-wise addition
         info_gain_stats = info_gain_stats + np.array(eval_info_gain(c.guesses, c.correct_answer, word_list)) #element-wise addition
-        end_letter_level_acc.append(eval_num_correct_letters(c.guesses, c.correct_answer))
+        end_letter_acc.append(eval_num_correct_letters(c.guesses, c.correct_answer))
 
     G, Y, W = GYW[0], GYW[1], GYW[2]
     correct_pct = (G) / (G + Y + W)
@@ -230,11 +231,11 @@ def get_aggregate_scores(conversation_list):
     wrong_pos_random = info_gain_stats[1][2] / info_gain_stats[1][1]
     undo_correct_random = info_gain_stats[2][2] / info_gain_stats[2][1]
 
-    end_letter_level_acc = sum(end_letter_level_acc) / len(conversation_list)
+    end_letter_acc = sum(end_letter_acc) / len(conversation_list)
     num_guesses = np.array(num_guesses)
     num_guesses_success = num_guesses[num_guesses >= 1]
     success_pct = len(num_guesses_success) / len(conversation_list)
-    avg_number_of_guesses = num_guesses_success.sum() / len(num_guesses_success)
+    avg_guess = num_guesses_success.sum() / len(num_guesses_success)
 
     print(f"Correct percentage: {correct_pct}")
     print(f"Correct letter percentage: {correct_letter_pct}")
@@ -244,9 +245,25 @@ def get_aggregate_scores(conversation_list):
     print(f"Wrong letter random: {wrong_letter_random}")
     print(f"Wrong pos random: {wrong_pos_random}")
     print(f"Undo correct random: {undo_correct_random}")
-    print(f"End letter level acc: {end_letter_level_acc}")
+    print(f"End letter level acc: {end_letter_acc}")
     print(f"Success percentage: {success_pct}")
-    print(f"Average number of guesses: {avg_number_of_guesses}")
+    print(f"Average number of guesses: {avg_guess}")
+    
+    eval_dict = {
+        'correct_pct': correct_pct,
+        'correct_letter_pct': correct_letter_pct,
+        'wrong_letter_prevalence': wrong_letter_prevalence,
+        'wrong_pos_prevalence': wrong_pos_prevalence,
+        'undo_correct_prevalence': undo_correct_prevalence,
+        'wrong_letter_random': wrong_letter_random,
+        'wrong_pos_random': wrong_pos_random,
+        'undo_correct_random': undo_correct_random,
+        'end_letter_acc': end_letter_acc,
+        'success_pct': success_pct,
+        'avg_guess': avg_guess
+    }
+    
+    return eval_dict
 
 
 def main():
