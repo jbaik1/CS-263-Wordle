@@ -45,3 +45,9 @@ python3 run_models.py \
 --max_turns 5 \
 --use_vllm
 ```
+### File Contents
+A brief overview of the files in the repository:
+1. Wordle logic is contained in wordle.py, using words from words.txt
+2. Prompting is contained in prompting.py, with several Jupyter notebooks for individual experiments
+3. Experiments can be run using run_models.py, and the results are generally stored in the outputs folder
+4. Outputs are then analyzed using eval.py and eval.ipynb
