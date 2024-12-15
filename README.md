@@ -1,4 +1,5 @@
 # CS-263-Wordle
+See "Solving Wordle with LLMs.pdf" for the full report.
 
 ## Environment setup
 ```bash
