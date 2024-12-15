@@ -1,0 +1,184 @@
+{
+    "0": [
+        {
+            "role": "system",
+            "content": "Wordle is a 5 letter word guessing game. Each letter in a guess will either be a correct letter in correct position, an invalid letter or a correct letter present in the word but in a wrong position. After each guess, we get a result"
+        },
+        {
+            "role": "system",
+            "content": "Example #1:"
+        },
+        {
+            "role": "user",
+            "content": "Let's play a new game with a different word"
+        },
+        {
+            "role": "assistant",
+            "content": "Guess:\n{ \n    \"guess: \"BAGEL\",\n    \"reasoning\" : \"\n        We are starting a new game, and this is a random initial guess\n        \"\n        \n}\n            "
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'BAGEL'. The feedback for each letter is:\n{ \n1: Letter B is not anywhere present in the word.\n2: Letter A is not anywhere present in the word.\n3: Letter G is not anywhere present in the word.\n4: Letter E at Position 4 is in the word and at the correct position.\n5: Letter L is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Guess:\n{ \n    \"guess: \"COVER\",\n    \"reasoning\" : \"\n        The list of previously guessed words are: ['BAGEL']\n        The list of valid letters are: ['E']\n        The list of invalid letters are: ['B', 'A', 'G', 'L']\n\n        The previous guess was: BAGEL\n        Given the previous feedback, we know that\n        1. The letter at position 1 (B) was not in the string \n        2. The letter at position 2 (A) was not in the string \n        3. The letter at position 3 (G) was not in the string \n        4. The letter at position 4 (E) was in the string and in the correct position \n        5. The letter at position 5 (L) was not in the string \n\n        Improving on this feedback,\n        the new guess is COVER\n        \"\n        \n}\n                "
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'COVER'. The feedback for each letter is:\n{ \n1: Letter C is not anywhere present in the word.\n2: Letter O is not anywhere present in the word.\n3: Letter V is not anywhere present in the word.\n4: Letter E at Position 4 is in the word and at the correct position.\n5: Letter R at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Guess:\n{ \n    \"guess: \"THREE\",\n    \"reasoning\" : \"\n        The list of previously guessed words are: ['BAGEL', 'COVER']\n        The list of valid letters are: ['E']\n        The list of invalid letters are: ['O', 'G', 'V', 'L', 'A', 'C', 'B']\n\n        The previous guess was: COVER\n        Given the previous feedback, we know that\n        1. The letter at position 1 (C) was not in the string \n        2. The letter at position 2 (O) was not in the string \n        3. The letter at position 3 (V) was not in the string \n        4. The letter at position 4 (E) was in the string and in the correct position \n        5. The letter at position 5 (R) was in the string but in the wrong position \n\n        Improving on this feedback,\n        the new guess is THREE\n        \"\n        \n}\n                "
+        },
+        {
+            "role": "user",
+            "content": "Congrats you found the correct word THREE in 3 guesses, because all letters were in the word and in the right position!"
+        },
+        {
+            "role": "system",
+            "content": "Example #1:"
+        },
+        {
+            "role": "user",
+            "content": "Let's play a new game with a different word"
+        },
+        {
+            "role": "assistant",
+            "content": "Guess:\n{ \n    \"guess: \"WHILE\",\n    \"reasoning\" : \"\n        We are starting a new game, and this is a random initial guess\n        \"\n        \n}\n            "
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'WHILE'. The feedback for each letter is:\n{ \n1: Letter W is not anywhere present in the word.\n2: Letter H is not anywhere present in the word.\n3: Letter I is not anywhere present in the word.\n4: Letter L is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Guess:\n{ \n    \"guess: \"RADIO\",\n    \"reasoning\" : \"\n        The list of previously guessed words are: ['WHILE']\n        The list of valid letters are: []\n        The list of invalid letters are: ['W', 'H', 'I', 'L', 'E']\n\n        The previous guess was: WHILE\n        Given the previous feedback, we know that\n        1. The letter at position 1 (W) was not in the string \n        2. The letter at position 2 (H) was not in the string \n        3. The letter at position 3 (I) was not in the string \n        4. The letter at position 4 (L) was not in the string \n        5. The letter at position 5 (E) was not in the string \n\n        Improving on this feedback,\n        the new guess is RADIO\n        \"\n        \n}\n                "
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'RADIO'. The feedback for each letter is:\n{ \n1: Letter R is not anywhere present in the word.\n2: Letter A at Position 2 is in the wrong position but is in the word.\n3: Letter D is not anywhere present in the word.\n4: Letter I is not anywhere present in the word.\n5: Letter O is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Guess:\n{ \n    \"guess: \"START\",\n    \"reasoning\" : \"\n        The list of previously guessed words are: ['WHILE', 'RADIO']\n        The list of valid letters are: []\n        The list of invalid letters are: ['O', 'D', 'W', 'L', 'R', 'I', 'H', 'E']\n\n        The previous guess was: RADIO\n        Given the previous feedback, we know that\n        1. The letter at position 1 (R) was not in the string \n        2. The letter at position 2 (A) was in the string but in the wrong position \n        3. The letter at position 3 (D) was not in the string \n        4. The letter at position 4 (I) was not in the string \n        5. The letter at position 5 (O) was not in the string \n\n        Improving on this feedback,\n        the new guess is START\n        \"\n        \n}\n                "
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'START'. The feedback for each letter is:\n{ \n1: Letter S at Position 1 is in the word and at the correct position.\n2: Letter T at Position 2 is in the word and at the correct position.\n3: Letter A at Position 3 is in the word and at the correct position.\n4: Letter R is not anywhere present in the word.\n5: Letter T is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Guess:\n{ \n    \"guess: \"STAGE\",\n    \"reasoning\" : \"\n        The list of previously guessed words are: ['WHILE', 'RADIO', 'START']\n        The list of valid letters are: ['T', 'A', 'S']\n        The list of invalid letters are: ['O', 'D', 'W', 'L', 'R', 'I', 'H', 'T', 'E']\n\n        The previous guess was: START\n        Given the previous feedback, we know that\n        1. The letter at position 1 (S) was in the string and in the correct position \n        2. The letter at position 2 (T) was in the string and in the correct position \n        3. The letter at position 3 (A) was in the string and in the correct position \n        4. The letter at position 4 (R) was not in the string \n        5. The letter at position 5 (T) was not in the string \n\n        Improving on this feedback,\n        the new guess is STAGE\n        \"\n        \n}\n                "
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'STAGE'. The feedback for each letter is:\n{ \n1: Letter S at Position 1 is in the word and at the correct position.\n2: Letter T at Position 2 is in the word and at the correct position.\n3: Letter A at Position 3 is in the word and at the correct position.\n4: Letter G is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Guess:\n{ \n    \"guess: \"STAFF\",\n    \"reasoning\" : \"\n        The list of previously guessed words are: ['WHILE', 'RADIO', 'START', 'STAGE']\n        The list of valid letters are: ['T', 'A', 'S']\n        The list of invalid letters are: ['O', 'G', 'D', 'W', 'L', 'R', 'I', 'H', 'T', 'E']\n\n        The previous guess was: STAGE\n        Given the previous feedback, we know that\n        1. The letter at position 1 (S) was in the string and in the correct position \n        2. The letter at position 2 (T) was in the string and in the correct position \n        3. The letter at position 3 (A) was in the string and in the correct position \n        4. The letter at position 4 (G) was not in the string \n        5. The letter at position 5 (E) was not in the string \n\n        Improving on this feedback,\n        the new guess is STAFF\n        \"\n        \n}\n                "
+        },
+        {
+            "role": "user",
+            "content": "Congrats you found the correct word STAFF in 5 guesses, because all letters were in the word and in the right position!"
+        },
+        {
+            "role": "system",
+            "content": "Example #1:"
+        },
+        {
+            "role": "user",
+            "content": "Let's play a new game with a different word"
+        },
+        {
+            "role": "assistant",
+            "content": "Guess:\n{ \n    \"guess: \"TASTE\",\n    \"reasoning\" : \"\n        We are starting a new game, and this is a random initial guess\n        \"\n        \n}\n            "
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'TASTE'. The feedback for each letter is:\n{ \n1: Letter T is not anywhere present in the word.\n2: Letter A is not anywhere present in the word.\n3: Letter S is not anywhere present in the word.\n4: Letter T is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Guess:\n{ \n    \"guess: \"HOARD\",\n    \"reasoning\" : \"\n        The list of previously guessed words are: ['TASTE']\n        The list of valid letters are: []\n        The list of invalid letters are: ['T', 'A', 'S', 'T', 'E']\n\n        The previous guess was: TASTE\n        Given the previous feedback, we know that\n        1. The letter at position 1 (T) was not in the string \n        2. The letter at position 2 (A) was not in the string \n        3. The letter at position 3 (S) was not in the string \n        4. The letter at position 4 (T) was not in the string \n        5. The letter at position 5 (E) was not in the string \n\n        Improving on this feedback,\n        the new guess is HOARD\n        \"\n        \n}\n                "
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'HOARD'. The feedback for each letter is:\n{ \n1: Letter H is not anywhere present in the word.\n2: Letter O at Position 2 is in the wrong position but is in the word.\n3: Letter A is not anywhere present in the word.\n4: Letter R is not anywhere present in the word.\n5: Letter D is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Guess:\n{ \n    \"guess: \"PROVE\",\n    \"reasoning\" : \"\n        The list of previously guessed words are: ['TASTE', 'HOARD']\n        The list of valid letters are: []\n        The list of invalid letters are: ['D', 'R', 'A', 'S', 'H', 'T', 'E']\n\n        The previous guess was: HOARD\n        Given the previous feedback, we know that\n        1. The letter at position 1 (H) was not in the string \n        2. The letter at position 2 (O) was in the string but in the wrong position \n        3. The letter at position 3 (A) was not in the string \n        4. The letter at position 4 (R) was not in the string \n        5. The letter at position 5 (D) was not in the string \n\n        Improving on this feedback,\n        the new guess is PROVE\n        \"\n        \n}\n                "
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'PROVE'. The feedback for each letter is:\n{ \n1: Letter P at Position 1 is in the word and at the correct position.\n2: Letter R at Position 2 is in the word and at the correct position.\n3: Letter O at Position 3 is in the word and at the correct position.\n4: Letter V is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Guess:\n{ \n    \"guess: \"PROWL\",\n    \"reasoning\" : \"\n        The list of previously guessed words are: ['TASTE', 'HOARD', 'PROVE']\n        The list of valid letters are: ['O', 'P', 'R']\n        The list of invalid letters are: ['V', 'D', 'R', 'A', 'S', 'H', 'T', 'E']\n\n        The previous guess was: PROVE\n        Given the previous feedback, we know that\n        1. The letter at position 1 (P) was in the string and in the correct position \n        2. The letter at position 2 (R) was in the string and in the correct position \n        3. The letter at position 3 (O) was in the string and in the correct position \n        4. The letter at position 4 (V) was not in the string \n        5. The letter at position 5 (E) was not in the string \n\n        Improving on this feedback,\n        the new guess is PROWL\n        \"\n        \n}\n                "
+        },
+        {
+            "role": "user",
+            "content": "Congrats you found the correct word PROWL in 4 guesses, because all letters were in the word and in the right position!"
+        },
+        {
+            "role": "system",
+            "content": "Example #1:"
+        },
+        {
+            "role": "user",
+            "content": "Let's play a new game with a different word"
+        },
+        {
+            "role": "assistant",
+            "content": "Guess:\n{ \n    \"guess: \"RAISE\",\n    \"reasoning\" : \"\n        We are starting a new game, and this is a random initial guess\n        \"\n        \n}\n            "
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'RAISE'. The feedback for each letter is:\n{ \n1: Letter R at Position 1 is in the wrong position but is in the word.\n2: Letter A is not anywhere present in the word.\n3: Letter I at Position 3 is in the wrong position but is in the word.\n4: Letter S is not anywhere present in the word.\n5: Letter E at Position 5 is in the wrong position but is in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Guess:\n{ \n    \"guess: \"THEIR\",\n    \"reasoning\" : \"\n        The list of previously guessed words are: ['RAISE']\n        The list of valid letters are: []\n        The list of invalid letters are: ['A', 'S']\n\n        The previous guess was: RAISE\n        Given the previous feedback, we know that\n        1. The letter at position 1 (R) was in the string but in the wrong position \n        2. The letter at position 2 (A) was not in the string \n        3. The letter at position 3 (I) was in the string but in the wrong position \n        4. The letter at position 4 (S) was not in the string \n        5. The letter at position 5 (E) was in the string but in the wrong position \n\n        Improving on this feedback,\n        the new guess is THEIR\n        \"\n        \n}\n                "
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'THEIR'. The feedback for each letter is:\n{ \n1: Letter T is not anywhere present in the word.\n2: Letter H is not anywhere present in the word.\n3: Letter E at Position 3 is in the wrong position but is in the word.\n4: Letter I at Position 4 is in the wrong position but is in the word.\n5: Letter R at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Guess:\n{ \n    \"guess: \"LIVER\",\n    \"reasoning\" : \"\n        The list of previously guessed words are: ['RAISE', 'THEIR']\n        The list of valid letters are: ['R']\n        The list of invalid letters are: ['T', 'A', 'H', 'S']\n\n        The previous guess was: THEIR\n        Given the previous feedback, we know that\n        1. The letter at position 1 (T) was not in the string \n        2. The letter at position 2 (H) was not in the string \n        3. The letter at position 3 (E) was in the string but in the wrong position \n        4. The letter at position 4 (I) was in the string but in the wrong position \n        5. The letter at position 5 (R) was in the string and in the correct position \n\n        Improving on this feedback,\n        the new guess is LIVER\n        \"\n        \n}\n                "
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'LIVER'. The feedback for each letter is:\n{ \n1: Letter L is not anywhere present in the word.\n2: Letter I at Position 2 is in the word and at the correct position.\n3: Letter V is not anywhere present in the word.\n4: Letter E at Position 4 is in the word and at the correct position.\n5: Letter R at Position 5 is in the word and at the correct position.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "assistant",
+            "content": "Guess:\n{ \n    \"guess: \"NICER\",\n    \"reasoning\" : \"\n        The list of previously guessed words are: ['RAISE', 'THEIR', 'LIVER']\n        The list of valid letters are: ['R', 'E', 'I']\n        The list of invalid letters are: ['V', 'L', 'A', 'S', 'H', 'T']\n\n        The previous guess was: LIVER\n        Given the previous feedback, we know that\n        1. The letter at position 1 (L) was not in the string \n        2. The letter at position 2 (I) was in the string and in the correct position \n        3. The letter at position 3 (V) was not in the string \n        4. The letter at position 4 (E) was in the string and in the correct position \n        5. The letter at position 5 (R) was in the string and in the correct position \n\n        Improving on this feedback,\n        the new guess is NICER\n        \"\n        \n}\n                "
+        },
+        {
+            "role": "user",
+            "content": "Congrats you found the correct word NICER in 4 guesses, because all letters were in the word and in the right position!"
+        },
+        {
+            "role": "user",
+            "content": "let's play another game. Start with your random initial guess"
+        },
+        {
+            "role": "assistant",
+            "content": "Let's play another game.\n\nMy random initial guess is: \"FABLE\"\n\nPlease enter the feedback for each letter."
+        },
+        {
+            "role": "user",
+            "content": "Feedback:\nYour guess was: 'FABLE'. The feedback for each letter is:\n{ \n1: Letter F is not anywhere present in the word.\n2: Letter A at Position 2 is in the word and at the correct position.\n3: Letter B is not anywhere present in the word.\n4: Letter L is not anywhere present in the word.\n5: Letter E is not anywhere present in the word.\n\n}\nPlease enter your next guess:\n"
+        },
+        {
+            "role": "system",
+            "content": "1 guesses exhausted! The correct answer is catch"
+        }
+    ]
+}

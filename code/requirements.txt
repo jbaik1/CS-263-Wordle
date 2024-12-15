@@ -1,0 +1,9 @@
+torch
+torchvision
+torchaudio
+transformers
+vllm
+jupyterlab
+ipywidgets
+accelerate
+bitsandbytes
